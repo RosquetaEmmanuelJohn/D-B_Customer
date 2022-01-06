@@ -68,6 +68,10 @@ export class Tab1Component implements OnInit {
       );
   }
 
+  quick() {
+    this.router.navigate(['nav/quick']);
+  }
+
   getFlower() {
     this.dataService
       .processData(btoa('get_flowers').replace('=', ''), null, 2)!

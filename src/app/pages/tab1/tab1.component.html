@@ -1,65 +1,3 @@
-<!-- <div class="container mt-4 mb-4 p-3 d-flex justify-content-center wrapper">
-  
-  <div *ngIf="!flowers" style="text-align: center;"><h1><strong>No Promo Offers Yet</strong></h1><br>
-    <div>
-      <div class="row mx-auto" id="gridInput">  
-        <mat-divider></mat-divider>    
-        <div class="card col-sm mt-2" style="background: none;" matRipple>
-          <div class="card-body" style="cursor: pointer;">
-              <h2>“Flowers don’t worry about how they’re going to bloom. <br>They just open up and turn toward the light and that makes them beautiful.” <br>Jim Carrey</h2>
-          </div>
-        </div>
-      </div>
-
-      <div class="row mx-auto" id="gridInput">
-        <div class="card col-sm mt-4" style="background: none;" matRipple>
-          <div class="card-body" style="cursor: pointer;">
-              <h2 class="card-title">Details and Blooms</h2>
-              <h3>Details and Blooms can be found within Harbor Point Mall at the Ground Floor. <br>(Near the center), Subic Bay Freeport Zone<br>Contant Us: 0912-424-0028</h3>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <div *ngIf="flowers" style="text-align: center;">
-    <h1><strong>December Offers</strong></h1><br>
-    <div  style="display: flex;">
-      <div class="row mx-auto" id="gridInput">  
-        <mat-divider></mat-divider>    
-        <div class="col-sm mt-2" id="promo_card" *ngFor ="let flower of flowers; let i = index">
-          <div class="card-body" id="promo_card_body" (click)="confirm(i, flower)" style="cursor: pointer;"  matRipple>
-            <div id="promo_div">
-              <img
-                  id="promo_img"
-                  src="../../../assets/quick/{{flower.quick_name}}.png"
-                  class="card-img-top p-1"
-                  alt="{{flower.name}}"
-              />
-            </div>
-            <div id="quick_info">
-              {{ flower.quick_name | titlecase }}<br>
-
-              {{flower.quick_price | currency: selectedCurrency}} 
-            </div>
-            
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
-<!-- style="background: linear-gradient(180deg, #894794 0%, #db8691 100%);" -->
-
-<!-- <div class="mt-3 mb-3" id="image_home">
-  <div class="top">
-    <h1>Details & Blooms Events and Flowers</h1>
-    <h1>Provides assistance to event needs </h1>
-    <h3>Cater to flower arrangements styling requirements for all occasions.</h3>
-  </div>
-</div> -->
-
 <div class="top-header">
   <img src="../../../assets/icon/header1.jpg" class="top-image" alt="Snow" />
 
@@ -68,36 +6,15 @@
     <h1 class="sub-title">
       Cater to flower arrangements styling requirements for all occasions.
     </h1>
-    <button>Shop Now</button>
+    <button type="button" class="large-button" (click)="quick()">
+      Shop Now
+    </button>
   </div>
 </div>
 
-<!-- <div class="jumbotron mt-3" id="image_home">
-  <p class="lead">Provides assistance to event needs</p>
-  <p class="lead">
-    Cater to flower arrangements styling requirements for all occasions
-  </p>
-
-  <p>Flowers for all occasions available now!</p>
-  <p class="lead">
-    <a class="btn btn-primary btn-lg" href="#/nav/quick" role="button"
-      >Shop Now!</a
-    >
-  </p>
-</div> -->
-
-<div
-  class="mt-2 mb-2"
-  style="
-    color: rgb(2, 34, 12);
-    background-color: none;
-    text-align: center;
-    padding: 50px 80px;
-    text-align: justify;
-  "
->
+<div class="showcase">
   <h3 class="mb-5" id="line-style" style="text-align: center">
-    <span>Explore Our Products</span>
+    <span class="explorer">Explore Our Products</span>
   </h3>
 
   <div class="container w-100">
@@ -132,12 +49,6 @@
     </div>
   </div>
 </div>
-<!-- [imageSize]="{width: '30%', height: '50%'}" -->
-<!-- <div class="bgimg-2">
-  <div class="caption">
-  <span class="border" style="background-color:#00f7ff;font-size:25px;color: #000000;">Flowers</span>
-  </div>
-</div> -->
 
 <div class="jumbotron mt-3">
   <div id="container">
@@ -195,50 +106,6 @@
 </div>
 
 <!-- For inquires and booking call us at (047)645-9268; 0999 972 0081; 0915 424 0028 or shoot us a message at detailsandblooms@yahoo.com -->
-
-<div class="mt-2 mb-2" style="position: relative">
-  <div
-    style="
-      color: rgb(2, 34, 12);
-      background-color: none;
-      text-align: center;
-      padding: 50px 80px;
-      text-align: justify;
-    "
-  >
-    <h3 class="mb-5" id="line-style" style="text-align: center">
-      <span>Available Flowers</span>
-    </h3>
-    <div style="text-align: center; margin: 0; padding: 0">
-      <ng-image-slider
-        #nav
-        [images]="order_flowers"
-        [infinite]="true"
-        [autoSlide]="1"
-        slideImage="1"
-      ></ng-image-slider>
-    </div>
-  </div>
-</div>
-
-<!-- <div class="bgimg-3">
-  <div class="caption">
-  <span class="border" style="background-color:transparent;font-size:25px;color: #000000;">Bouquets</span>
-  </div>
-</div>
-
-<div style="position:relative;">
-  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-    <h3 style="text-align:center;">Details & Blooms</h3>
-    <p style="text-align:center;">Details and Blooms can be found within Harbor Point Mall at the Ground Floor. <br>(Near the center), Subic Bay Freeport Zone<br>Contant Us: 0912-424-0028</p>
-</div>
-</div>
-
-<div class="bgimg-1">
-  <div class="caption">
-  <span class="border">Buy Now!</span>
-  </div>
-</div> -->
 
 <footer>
   <div class="container">

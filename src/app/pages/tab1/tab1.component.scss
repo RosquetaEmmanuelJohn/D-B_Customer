@@ -332,14 +332,77 @@ h3 {
     transform: translate(-50%, -50%);
     color: #000000;
 
-    .title {
-      font-size: 5vh;
-      text-transform: uppercase;
+    .large-button {
+      background-color: #4caf50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 5px;
     }
 
-    .sub-title {
-      font-size: 3vh;
-      text-transform: lowercase;
+    .large-button:hover {
+      background-color: #169e1b; /* Green */
+      color: white;
     }
   }
+}
+
+@media screen and (min-width: 601px) {
+  .title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+  }
+
+  .sub-title {
+    font-size: 1.5vw;
+    text-transform: lowercase;
+  }
+
+  .showcase {
+    color: rgb(2, 34, 12);
+    background-color: none;
+    text-align: center;
+    padding: 50px 80px;
+    text-align: justify;
+  }
+
+  .explorer {
+    font-size: 3vh;
+  }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+  .title {
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .sub-title {
+    font-size: 0.8rem;
+    text-transform: lowercase;
+    margin: 0;
+  }
+
+  .showcase {
+    margin-top: 30%;
+    color: rgb(2, 34, 12);
+    background-color: none;
+    text-align: center;
+    padding: 5px 8px;
+    text-align: justify;
+  }
+
+  .explorer {
+    font-size: 2vh;
+  }
+}
+
+.card-title {
+  text-transform: uppercase;
 }
