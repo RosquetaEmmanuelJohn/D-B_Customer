@@ -1,0 +1,189 @@
+<div id="center container" class="wrapper">
+    <div class="card mx-auto" id="main_card1">
+      <div class="card-body" id="card_info" style="display: flex;">
+        <div class="mx-auto">
+          <h1>Account Information</h1>
+        </div>
+  
+      </div>
+    </div>
+  
+    <div class="card mx-auto" id="main_card">
+      <div class="card-body" id="card_info">
+        <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
+          <mat-tab label="Login">
+            <form ngNativeValidate (submit)="login($event)">
+                <div class="input-group mb-3 mt-5">
+                  <input
+                    type="email"
+                    name=""
+                    class="form-control input_user"
+                    value=""
+                    placeholder="Enter Email"
+                    required
+                  />
+                </div>
+                <div class="input-group mb-2">
+                  <input
+                    name=""
+                    [type]="passwordType"
+                    class="form-control input_pass"
+                    value=""
+                    placeholder="Password"
+                    required
+                  />
+                </div>
+
+                <div class="form-check mb-2">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                    (change)="onChange()"
+                    [(ngModel)]="checkBox"
+                    [ngModelOptions]="{ standalone: true }"
+                  />
+                  <small
+                    ><label class="form-check-label" style="color: rgb(2, 34, 12);">
+                      Show Password
+                    </label></small
+                  >
+                </div>
+
+                <div
+                  class="
+                    d-flex
+                    justify-content-center
+                    mt-3
+                    login_container
+                  "
+                >
+                  <button
+                    type="submit"
+                    name="button"
+                    class="btn login_btn"
+                  >
+                    Login
+                  </button>
+                  
+                </div>
+                <div
+                  class="
+                    d-flex
+                    justify-content-center
+                    mt-3
+                    login_container
+                  "
+                >
+                </div>
+              </form>
+          </mat-tab>
+  
+          <mat-tab label="Register">
+            <form ngNativeValidate (submit)="register($event)">
+                <div class="input-group mb-3 mt-3">
+                  <input
+                    type="text"
+                    name=""
+                    class="form-control input_user"
+                    value=""
+                    placeholder="Enter First Name"
+                    required
+                  />
+                </div>
+                <div class="input-group mb-3">
+                  <input
+                    type="text"
+                    name=""
+                    class="form-control input_user"
+                    value=""
+                    placeholder="Enter Last Name"
+                    required
+                  />
+                </div>
+                <div class="input-group mb-3">
+                  <input
+                    type="email"
+                    name=""
+                    class="form-control input_user"
+                    value=""
+                    placeholder="Enter Email"
+                    required
+                  />
+                </div>
+                <div class="input-group mb-3">
+                  <input
+                    type="text"
+                    name=""
+                    class="form-control input_user"
+                    value=""
+                    placeholder="Enter Address"
+                    required
+                  />
+                </div>
+                <div class="input-group mb-2">
+                  <input
+                    name=""
+                    [type]="passwordType"
+                    class="form-control input_pass"
+                    value=""
+                    placeholder="Password"
+                    minlength="8"
+                    required
+                  />
+                </div>
+
+                <div class="form-check mb-2">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                    (change)="onChange()"
+                    [(ngModel)]="checkBox"
+                    [ngModelOptions]="{ standalone: true }"
+                  />
+                  <small
+                    ><label class="form-check-label" style="color: rgb(2, 34, 12);">
+                      Show Password
+                    </label></small
+                  >
+                </div>
+
+                <div
+                  class="
+                    d-flex
+                    justify-content-center
+                    mt-3
+                    login_container
+                  "
+                >
+                  <button
+                    type="submit"
+                    name="button"
+                    class="btn login_btn"
+                  >
+                    Register
+                  </button>
+                  
+                </div>
+                <div
+                  class="
+                    d-flex
+                    justify-content-center
+                    mt-3
+                    login_container
+                  "
+                >
+                </div>
+              </form>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+    </div>
+</div>
+
+<div id="page-overlay" *ngIf="showSpinner">
+    <img class="rotate" id="spinner" src="../../../assets/icon/benef_logo.png"><b id="wait">Please wait...</b>
+</div>
