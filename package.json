@@ -16,6 +16,7 @@
     "@angular/common": "~11.1.2",
     "@angular/compiler": "~11.1.2",
     "@angular/core": "~11.1.2",
+    "@angular/flex-layout": "^13.0.0-beta.36",
     "@angular/forms": "~11.1.2",
     "@angular/localize": "~11.1.2",
     "@angular/material": "^11.2.13",
@@ -32,9 +33,10 @@
     "ng-otp-input": "^1.8.0",
     "ng-pipe": "^1.4.10",
     "ng2-search-filter": "^0.5.1",
+    "primeng": "^11.4.2",
     "rxjs": "~6.6.0",
     "tsc-ui": "0.0.6",
-    "tslib": "^2.0.0",
+    "tslib": "^2.3.1",
     "zone.js": "~0.11.3"
   },
   "devDependencies": {

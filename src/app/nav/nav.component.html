@@ -1,136 +1,4 @@
-<!-- <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav
-    #drawer
-    mode="side"
-    opened="true"
-    class="sidenav"
-    fixedInViewport
-    style="background-color: #f7f7f7"
-  >
-    <mat-toolbar> </mat-toolbar>
-    <mat-nav-list>
-      <div class="sidebar" style="text-align: center">
-        <div class="logo-details">
-          <img
-            src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg"
-            alt="Italian Trulli"
-            style="border-radius: 25%"
-          />
-        </div>
-        <br />
-        <br />
-
-        <ul class="nav-list">
-          <li>
-            <a routerLink="tab1">
-              <i class="bx bx-grid-alt"></i>
-              <span class="links_name">Dashboard</span>
-            </a>
-            <span class="tooltip">Dashboard</span>
-          </li>
-          <br />
-          <li>
-            <a (click)="navTo('tab2')">
-              <i class="bx bxs-florist"></i>
-              <span class="links_name">Flowers</span>
-            </a>
-            <span class="tooltip">Flowers</span>
-          </li>
-          <br />
-
-          <li>
-            <a (click)="navTo('tab3')">
-              <i class="bx bx-user"></i>
-              <span class="links_name">User</span>
-            </a>
-            <span class="tooltip">User</span>
-          </li>
-          <li class="profile">
-            <a style="background: white">
-              <i class="bx bx-log-out"></i>
-              <span class="links_name">Logout</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <br />
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content style="background-color: white; margin-left: 4%">
-    <mat-toolbar color="accent">
-      <span>MeDrApp ADMIN</span>
-      <div class="div_log"></div>
-    </mat-toolbar>
-    <div [innerHtml]="template"></div>
-    <router-outlet></router-outlet>
-  </mat-sidenav-content>
-</mat-sidenav-container> -->
-
-<!-- <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav
-    #drawer
-    mode="side"
-    [(opened)]="opened"
-    class="sidenav"
-    fixedInViewport
-    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-    [mode]="(isHandset$ | async) ? 'over' : 'side'"
-    [opened]="(isHandset$ | async) === false"
-    style="background-color: #f7f7f7">
-
-    <mat-nav-list>
-      <div style="text-align: center">
-        <button
-          mat-fab
-          routerLink="tab1"
-          color="accent"
-          title="Dashboard"
-          style="margin-top: 20%"
-        >
-          <i class="bx bx-grid-alt"></i>
-        </button>
-        <br />
-        <br />
-        <label class="text-dark">Dashboard</label>
-      </div>
-      <br />
-
-      <div style="text-align: center">
-        <button
-          mat-fab
-          routerLink="tab2"
-          color="accent"
-          title="Flowers"
-          style="margin-top: 20%"
-        >
-          <i class="bx bxs-florist"></i>
-        </button>
-        <br />
-        <br />
-        <label class="text-dark">Flowers</label>
-      </div>
-      <br />
-
-      <div style="text-align: center">
-        <button
-          mat-fab
-          routerLink="tab3"
-          color="accent"
-          title="Doctors"
-          style="margin-top: 20%"
-        >
-          <i class="bx bx-user"></i>
-        </button>
-        <br />
-        <br />
-        <label class="text-dark">Doctors</label>
-      </div>
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content style="background-color: white">
-     -->
-
-<mat-toolbar>
+<!-- <mat-toolbar>
   <div class="tb-hold">
     <img
       src="../../assets/icon/benef_logo.png"
@@ -215,7 +83,7 @@
       </li>
     </ng-template>
   </ul>
-  <!-- <mat-icon>input</mat-icon> -->
+
   <div id="myCart" class="Cartoverlay">
     <a href="javascript:void(0)" class="closebtn" (click)="closeCart()"
       >&times;</a
@@ -318,7 +186,6 @@
                       <h1 id="details" class="justify-content-end mb-0 mt-0">
                         ₱{{ order.order_totalprice | number: "1.2-2" }}
                       </h1>
-                      <!-- <span id="checknow" class="justify-content-end mb-0 mt-0" *ngIf="i == index" style="float: right;">✅</span> -->
                     </div>
                   </td>
                 </tr>
@@ -327,43 +194,107 @@
           </li>
         </div>
       </ul>
-      <!-- <div class="mt-2 justify-content-center mx-auto" style="width: 80%;">
-        <button type="button" disabled class="btn btn-success btn-block">Checkout</button>
-      </div> -->
     </div>
   </div>
-  <!-- <span class="flexExpand"></span> -->
+</mat-toolbar> -->
 
-  <!-- <div class="icons" (click)="home()">
-    <mat-icon>home</mat-icon>
-    <div class="hide">HOME</div>
-  </div>
-  <div  class="icons" (click)="shop()">
-    <mat-icon>shopping_cart</mat-icon>
-    <div class="hide">SHOP</div>
-  </div>
-  <div class="icons" (click)="profile()">
-    <mat-icon >person</mat-icon>
-    <div class="hide">ACCOUNT</div>
-  </div>
-  <div class="dropdown">
-    <mat-icon class="dropbtn">more</mat-icon>
-    <div class="hide"> PAGES</div>
-    <div class="dropdown-content">
-      <a (click)="toPay()" title="All To Be Paid Orders"><mat-icon  style="font-size: 120%;">check</mat-icon> To Pay</a>
-      <a (click)="service()" title="All Processing Orders"><mat-icon  style="font-size: 120%;"> local_florist</mat-icon> Service</a>
-      <a (click)="completed()" title="All Completed Orders"><mat-icon  style="font-size: 120%;">shopping_basket</mat-icon> Completed</a>
-      <a (click)="cancelled()" title="All Cancelled Orders"><mat-icon style="font-size: 120%;">cancel</mat-icon> Cancelled</a>
-    </div>
-  </div>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="over">
+    <label> <b style="font-family: 'Liberal'">DETAILS & BLOOMS</b></label>
+    <hr />
+    <nav>
+      <a routerLink="home" (click)="clickHandler()" routerLinkActive="active"
+        >Home</a
+      >
+      <a routerLink="about" (click)="clickHandler()" routerLinkActive="active"
+        >Florists Choice</a
+      >
+      <a routerLink="about" (click)="clickHandler()" routerLinkActive="active"
+        >Customers Choice</a
+      >
+      <a routerLink="login" (click)="clickHandler()" routerLinkActive="active"
+        >To Pay</a
+      >
+      <a routerLink="sign-up" (click)="clickHandler()" routerLinkActive="active"
+        >Service</a
+      >
+      <a routerLink="contact" (click)="clickHandler()" routerLinkActive="active"
+        >About</a
+      >
+    </nav>
+  </mat-sidenav>
 
-    <div class="icon" (click)="logout()">
-      <mat-icon>power_settings_new</mat-icon>
-      <div class="hide">LOGOUT</div> 
-    </div> -->
-</mat-toolbar>
-
-<!-- <div [innerHtml]="template"></div> -->
-<router-outlet></router-outlet>
-<!-- </mat-sidenav-content>
-</mat-sidenav-container> -->
+  <mat-sidenav-content>
+    <mat-toolbar
+      color="primary"
+      style="height: 4rem; background: #e3f0ff; color: black"
+    >
+      <header>
+        <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+        <label>
+          <b>DETAILS & BLOOMS</b>
+        </label>
+        <nav>
+          <ul class="nav justify-content-center">
+            <li class="nav-item" id="nav-items">
+              <a class="nav-link" title="Home Page" href="#/nav/home">Home</a>
+            </li>
+            <li class="dropdown" id="nav-items">
+              <a class="nav-link" title="Shop Pages"
+                >Bouquets<mat-icon style="font-size: 90%"
+                  >keyboard_arrow_down</mat-icon
+                ></a
+              >
+            </li>
+            <div id="myNav" class="overlay">
+              <div class="overlay-content mt-3">
+                <div class="col">
+                  <a href="#/nav/quick" class="card mx-auto" id="card">
+                    <div class="card-body" id="card_body1">
+                      <h1 class="card-title">
+                        <mat-icon>flash_on</mat-icon><br />Florists Choice
+                      </h1>
+                      <p class="card-text">
+                        (Preferred) <br />Beautiful Flower Bouquets designed by
+                        <br />Details & Blooms skilled Florists<br />that will
+                        Astound and Delight you.
+                      </p>
+                    </div>
+                  </a>
+                </div>
+                <div class="col">
+                  <a href="#/nav/custom" class="card mx-auto mt-3" id="card2">
+                    <div class="card-body" id="card_body2">
+                      <h1 class="card-title1">
+                        <mat-icon>brush</mat-icon><br />Customers Choice
+                      </h1>
+                      <p class="card-text">
+                        (Customized)<br />Make your Flower Bouquet Unique.
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <li class="nav-item" id="nav-items">
+              <a class="nav-link" title="To Pay Page" href="#/nav/toPay"
+                >To Pay</a
+              >
+            </li>
+            <li class="nav-item" id="nav-items">
+              <a class="nav-link" title="Service Page" href="#/nav/service"
+                >Service</a
+              >
+            </li>
+            <li class="nav-item" id="nav-items">
+              <a class="nav-link" title="About Us" (click)="AboutUs()">About</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </mat-toolbar>
+    <section>
+      <router-outlet></router-outlet>
+    </section>
+  </mat-sidenav-content>
+</mat-sidenav-container>

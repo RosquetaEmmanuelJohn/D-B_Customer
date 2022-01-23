@@ -80,7 +80,7 @@ export class Tab1Component implements OnInit {
           let load = this.dataService.decrypt(dt.a);
           // console.log(load);
           this.flowers = load.payload.data;
-          // console.log(this.flowers);
+          console.log(this.flowers);
           this.flower_loop();
         },
         (er) => {

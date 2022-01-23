@@ -3,9 +3,9 @@
 
   <div class="centered">
     <h1 class="title">Provides assistance to event needs</h1>
-    <h1 class="sub-title">
+    <p class="sub-title">
       Cater to flower arrangements styling requirements for all occasions.
-    </h1>
+    </p>
     <button type="button" class="large-button" (click)="quick()">
       Shop Now
     </button>
@@ -17,43 +17,120 @@
     <span class="explorer">Explore Our Products</span>
   </h3>
 
-  <div class="container w-100">
-    <div class="row">
-      <div class="col-sm">
-        <div style="text-align: center; margin: 0; padding: 0">
-          <ng-image-slider
-            #nav
-            style="cursor: pointer"
-            [images]="orders"
-            [infinite]="true"
-            [autoSlide]="1"
-            slideImage="2"
-            [animationSpeed]="2"
-            [manageImageRatio]="true"
-            [imagePopup]="false"
-            (imageClick)="bouquet_click($event)"
-          ></ng-image-slider>
-        </div>
+  <div class="row">
+    <div class="col-sm column-slider">
+      <div style="text-align: center; margin: 0; padding: 0">
+        <!-- <ng-image-slider
+          #nav
+          style="cursor: pointer"
+          [images]="orders"
+          [infinite]="true"
+          [autoSlide]="1"
+          slideImage="2"
+          [animationSpeed]="2"
+          [manageImageRatio]="true"
+          [imagePopup]="false"
+          (imageClick)="bouquet_click($event)"
+        ></ng-image-slider> -->
+
+        <p-carousel
+          [value]="obj_flowers"
+          styleClass="custom-carousel"
+          [numVisible]="3"
+          [numScroll]="1"
+          [circular]="true"
+          [autoplayInterval]="2000"
+        >
+          <ng-template let-product pTemplate="item">
+            <div class="product-item">
+              <div class="product-item-content">
+                <div class="p-mb-3"></div>
+                <img
+                  _ngcontent-keu-c52=""
+                  class="product-image"
+                  src="http://bloompod.api.gc-ecommerceapp.com/bloompod_api/quick/{{
+                    product.quick_name
+                  }}.jpg"
+                  alt="Bamboo Watch"
+                />
+                <div>
+                  <h3 class="p-mb-1 text-left pt-3">
+                    {{ product.quick_name }}
+                  </h3>
+                  <h4 class="p-mt-0 p-mb-3 text-left">
+                    ₱{{ product.quick_price | number: "1.2" }}
+                  </h4>
+                </div>
+
+                <!-- <div class="button-below">
+                <button type="button">
+                  <ion-icon slot="icon-only" name="checkmark-outline"></ion-icon>
+                </button>
+              </div> -->
+              </div>
+            </div>
+          </ng-template>
+        </p-carousel>
       </div>
-      <div class="col-sm">
-        <div style="text-align: center; margin: 0; padding: 0">
-          <ng-image-slider
-            #nav
-            [images]="order_flowers"
-            [infinite]="true"
-            [autoSlide]="1"
-            slideImage="1"
-          ></ng-image-slider>
-        </div>
+    </div>
+    <div class="col-sm column-slider">
+      <div style="text-align: center; margin: 0; padding: 0">
+        <!-- <ng-image-slider
+          #nav
+          [images]="order_flowers"
+          [infinite]="true"
+          [autoSlide]="1"
+          slideImage="1"
+        ></ng-image-slider> -->
+
+        <p-carousel
+          [value]="flowers"
+          styleClass="custom-carousel"
+          [numVisible]="3"
+          [numScroll]="1"
+          [circular]="true"
+          [autoplayInterval]="2000"
+        >
+          <ng-template let-product pTemplate="item">
+            <div class="product-item">
+              <div class="product-item-content">
+                <div class="p-mb-3"></div>
+                <img
+                  _ngcontent-keu-c52=""
+                  class="product-image"
+                  src="http://bloompod.api.gc-ecommerceapp.com/bloompod_api/flowers/{{
+                    product.flower_name
+                  }}.png"
+                  alt="{{ product.flower_name }}"
+                />
+                <div>
+                  <h3 class="p-mb-1 text-left text-left pt-3">
+                    {{ product.flower_name }}
+                  </h3>
+                  <h4 class="p-mt-0 p-mb-3 text-left">
+                    ₱{{ product.flower_price | number: "1.2" }}
+                  </h4>
+                </div>
+
+                <!-- <div class="button-below">
+                <button type="button">
+                  <ion-icon slot="icon-only" name="checkmark-outline"></ion-icon>
+                </button>
+              </div> -->
+              </div>
+            </div>
+          </ng-template>
+        </p-carousel>
       </div>
     </div>
   </div>
 </div>
 
-<div class="jumbotron mt-3">
+<div class="jumbotron mt-3" style="background: #e3f0ff">
   <div id="container">
     <div class="box">
       <h1>Details & Blooms Events and Flowers</h1>
+
       <div class="cards">
         <article class="card">
           <a href="#/nav/quick">
@@ -100,6 +177,71 @@
             </div>
           </a>
         </article>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="jumbotron mt-3" style="background: transparent; height: 40rem">
+  <div class="row w-75 mx-auto mt-3">
+    <div class="col-sm d-flex justify-content-center">
+      <img src="../../../assets/icon/home_image3.jpg" width="60%" alt="" />
+    </div>
+    <div
+      class="col-sm"
+      style="
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      "
+    >
+      <div class="d-block">
+        <p class="lead">
+          Details & Blooms also offers a hassle and worry free occassion
+          package.
+        </p>
+        <p class="lead">Let Details & Blooms take care of your event.</p>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="responsive-card">
+  <div class="card-container">
+    <div class="float-layout">
+      <div class="card-image">
+        <img src="../../../assets/icon/home_image3.jpg" />
+        <div class="card">
+          <!-- <h1 class="card-title">What we offer</h1>
+          <p class="card-desc">
+            a hassle and worry free occassion package.Let Details & Blooms take
+            care of your event.
+          </p> -->
+
+          <!-- <div class="card-title">What we offer</div>
+          <div class="card-desc">
+            a hassle and worry free occassion package.Let Details & Blooms take
+            care of your event.
+          </div> -->
+
+          <div class="box">
+            <!-- <i class="fas fa-quote-left fa2"></i> -->
+            <i class="fas material-icons fa2">format_quote</i>
+            <div class="text">
+              <!-- <i class="fas fa-quote-right fa1"></i> -->
+              <i class="fas material-icons fa1">format_quote</i>
+
+              <div>
+                <h3>We Offer</h3>
+                <p>
+                  a hassle and worry free occassion package.Let Details & Blooms
+                  take care of your event.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Component, OnInit, Pipe, PipeTransform } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,34 +11,38 @@ import { RegisterComponent } from './register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgOtpInputModule } from 'ng-otp-input';
-import { MatDialog, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+import {
+  MatDialog,
+  MatDialogModule,
+  MatDialogRef,
+} from '@angular/material/dialog';
 import { DialogExampleComponent } from './dialog-example/dialog-example.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavComponent } from './nav/nav.component';
 import { NgImageSliderModule } from 'ng-image-slider';
 
-
 import { MatSidenavModule } from '@angular/material/sidenav';
+
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatRippleModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
-import {MatCardModule} from '@angular/material/card';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
-import {DragDropModule} from '@angular/cdk/drag-drop';
-import {MatBadgeModule} from '@angular/material/badge';
-import {MatExpansionModule} from '@angular/material/expansion';
-import {MatTooltipModule} from '@angular/material/tooltip';
+import { MatCardModule } from '@angular/material/card';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatChipsModule} from '@angular/material/chips';
-import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormsModule } from '@angular/forms';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import {MatTabsModule} from '@angular/material/tabs';
-import {MatInputModule} from '@angular/material/input';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatInputModule } from '@angular/material/input';
 
 import { Tab1Component } from './pages/tab1/tab1.component';
 import { Tab2Component } from './pages/tab2/tab2.component';
@@ -59,6 +64,9 @@ import { InformationComponent } from './dialog/information/information.component
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { CancelledComponent } from './profile-pages/cancelled/cancelled.component';
 import { Tab4Component } from './pages/tab4/tab4.component';
+import { CarouselModule } from 'primeng/carousel';
+import { ButtonModule } from 'primeng/button';
+import { ToastModule } from 'primeng/toast';
 @NgModule({
   declarations: [
     AppComponent,
@@ -97,7 +105,7 @@ import { Tab4Component } from './pages/tab4/tab4.component';
     BrowserAnimationsModule,
     DragDropModule,
     NgImageSliderModule,
-  
+
     // NG Material Modules
     MatSidenavModule,
     MatIconModule,
@@ -120,6 +128,10 @@ import { Tab4Component } from './pages/tab4/tab4.component';
     MatProgressSpinnerModule,
     MatTabsModule,
     MatInputModule,
+    RouterModule,
+    CarouselModule,
+    ButtonModule,
+    ToastModule,
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent],

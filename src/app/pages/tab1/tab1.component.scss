@@ -243,7 +243,7 @@ h3 {
   padding: 15px;
 }
 .box h1 {
-  font-family: Liberal;
+  // font-family: Liberal;
   font-style: normal;
   margin: 10px 0;
   color: inherit;
@@ -352,6 +352,53 @@ h3 {
 }
 
 @media screen and (min-width: 601px) {
+  .column-slider {
+    width: 50%;
+  }
+
+  .product-item {
+    padding: 0rem 1rem;
+    height: 22rem;
+    .product-item-content {
+      // border: 1px solid var(--surface-d);
+      // background: #f3f3f3;
+      // border-radius: 2.5rem;
+      margin: 0.3rem;
+      text-align: center;
+      padding: 0rem 0rem;
+
+      h4 {
+        color: #08595e;
+        font-size: 1rem;
+        font-weight: 600;
+
+        position: fixed;
+        bottom: 0;
+      }
+    }
+
+    .product-image {
+      width: 15rem;
+
+      // box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+      border-radius: 5px;
+    }
+  }
+
+  .showcase {
+    color: rgb(2, 34, 12);
+    background-color: none;
+    text-align: center;
+    padding: 20px 30px;
+    text-align: justify;
+  }
+
+  .top-header {
+    img {
+      height: 35rem;
+    }
+  }
+
   .title {
     font-size: 2.5rem;
     text-transform: uppercase;
@@ -362,6 +409,20 @@ h3 {
     text-transform: lowercase;
   }
 
+  .explorer {
+    font-size: 3vh;
+    background-color: none;
+  }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+  .top-header {
+    img {
+      height: 13rem;
+    }
+  }
+
   .showcase {
     color: rgb(2, 34, 12);
     background-color: none;
@@ -370,13 +431,31 @@ h3 {
     text-align: justify;
   }
 
-  .explorer {
-    font-size: 3vh;
-  }
-}
+  .product-item {
+    .product-item-content {
+      // border: 1px solid var(--surface-d);
 
-/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
-@media screen and (max-width: 600px) {
+      margin: 0.3rem;
+      text-align: center;
+      padding: 2rem 0;
+
+      h4 {
+        color: #08595e;
+        font-size: 1rem;
+        font-weight: 600;
+
+        position: fixed;
+        bottom: 0;
+      }
+    }
+
+    .product-image {
+      width: 10rem;
+      // box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+      border-radius: 5px;
+    }
+  }
+
   .title {
     font-size: 1rem;
     text-transform: uppercase;
@@ -405,4 +484,179 @@ h3 {
 
 .card-title {
   text-transform: uppercase;
+}
+
+// Card Responsive
+
+.responsive-card {
+  .float-layout {
+    padding: 5px 5px;
+    float: left;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  .card-container {
+    padding: 10rem;
+    overflow: hidden;
+  }
+
+  .card {
+    background-color: #e3f0ff;
+    color: black;
+    min-height: 100%; /*replace this it in width: 100%*/
+    width: 50%;
+    float: right;
+
+    * {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      background-color: #b71540;
+      font-family: "Montserrat", sans-serif;
+    }
+
+    .box {
+      background-color: transparent;
+      border-radius: 3px;
+      color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 400px;
+      height: 300px;
+      transform-style: preserve-3d;
+      perspective: 2000px;
+      transition: 0.4s;
+      text-align: center;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        border-top: 20px solid #fff;
+        border-left: 20px solid #fff;
+        box-sizing: border-box;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-bottom: 20px solid #fff;
+        border-right: 20px solid #fff;
+        box-sizing: border-box;
+      }
+      .fas {
+        font-size: 25px;
+        height: 50px;
+        width: 50px;
+        line-height: 50px !important;
+        background-color: #fff;
+        color: #4caf50;
+      }
+      .fa2 {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+      }
+      .text {
+        position: absolute;
+        top: 30px;
+        left: -30px;
+        width: calc(100% + 60px);
+        height: calc(100% - 60px);
+        background-color: #4caf50;
+        border: none;
+        border-radius: 3px;
+        transition: 0.4s;
+        .fa1 {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        div {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          text-align: center;
+          width: 100%;
+          padding: 30px 60px;
+          line-height: 1.5;
+          box-sizing: border-box;
+          h3 {
+            font-size: 30px;
+            margin-bottom: 5px;
+          }
+          p {
+            font-size: 15px;
+          }
+        }
+      }
+      &:hover {
+        .text {
+          transform: rotateY(20deg) skewY(-3deg);
+        }
+        transform: translate(-50%, -50%) rotateY(-20deg) skewY(3deg);
+      }
+    }
+  }
+
+  .card-title {
+    font-size: 5rem;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 20px;
+  }
+
+  .card-desc {
+    padding: 10px;
+    text-align: left;
+    font-size: 30px;
+  }
+
+  /*add this it*/
+  .card-image {
+    display: flex;
+  }
+  /*-------------*/
+
+  div.card-image img {
+    width: 50%;
+    height: auto;
+  }
+
+  /* Phone Devices Query */
+  @media only screen and (max-width: 37.5em) {
+    div.card-image img {
+      width: 100%;
+      height: auto;
+    }
+
+    /*add this it*/
+    .card-image {
+      flex-direction: column;
+    }
+    /*----------------------*/
+
+    .card {
+      width: 100%;
+      margin-top: -4px;
+    }
+  }
 }
