@@ -171,6 +171,7 @@ export class NavComponent implements OnInit {
   }
 
   Cart() {
+    console.log('here');
     this.check_users();
     if (this.check_user != 'guest') {
       this.getOrders();
