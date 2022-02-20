@@ -185,6 +185,11 @@ export class NavComponent implements OnInit {
     }
   }
 
+  m_cart() {
+    this.sidenav.toggle()
+    this.getOrders();
+  }
+
   clickHandler() {
     this.sidenav.close();
   }

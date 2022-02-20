@@ -12,6 +12,7 @@ mat-toolbar {
   // background: #00c4cc;
 
   // height: 100px;
+  border-bottom: none;
 }
 
 #nav_logo {
@@ -152,7 +153,7 @@ a:hover {
   z-index: 9;
   top: 65px;
   left: 0;
-  background: #e3f0ff;
+  background: linear-gradient(to top, #c39cddcc, #e3f0ff), white;
   overflow-y: hidden;
   transition: 0.5s;
   opacity: 1;
@@ -194,7 +195,7 @@ a:hover {
 //   font-size: 60px;
 // }
 
-@media screen and (max-height: 450px) {
+@media screen and (max-width: 450px) {
   .overlay {
     overflow-y: auto;
   }
@@ -301,16 +302,47 @@ a:hover {
 }
 
 @media screen and (max-height: 450px) {
-  .Cartoverlay {
-    overflow-y: auto;
+  .Cartoverlay1 {
+    height: 100vh;
+    width: 0%;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    background-color: #ffffff;
+    overflow-y: hidden;
+    transition: 0.5s;
+    border-left: 1px solid grey;
   }
+  
+  .Cartoverlay-content {
+    position: relative;
+    top: 3%;
+    // background-color: white;
+    // width: 100%;
+    // text-align: center;
+    // margin-top: 30px;
+  }
+  
   .Cartoverlay a {
-    font-size: 20px;
+    // padding: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
   }
+  
+  .Cartoverlay a:hover,
+  .Cartoverlay a:focus {
+    color: #000000;
+  }
+  
   .Cartoverlay .closebtn {
-    font-size: 40px;
-    // top: 15px;
-    right: 35px;
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 30px;
   }
 }
 
@@ -350,24 +382,24 @@ a:hover {
   background-color: #e3f0ff;
 }
 
-::-webkit-scrollbar {
-  width: 5px;
-}
+// ::-webkit-scrollbar {
+//   width: 5px;
+// }
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: #b4b4b4;
-}
+// /* Track */
+// ::-webkit-scrollbar-track {
+//   background: #b4b4b4;
+// }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: rgb(83, 83, 83);
-}
+// /* Handle */
+// ::-webkit-scrollbar-thumb {
+//   background: rgb(83, 83, 83);
+// }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: rgb(0, 0, 0);
-}
+// /* Handle on hover */
+// ::-webkit-scrollbar-thumb:hover {
+//   background: rgb(0, 0, 0);
+// }
 
 .text {
   // position: absolute;

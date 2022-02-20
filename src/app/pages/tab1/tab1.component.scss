@@ -318,7 +318,12 @@ h3 {
 .top-header {
   position: relative;
   text-align: center;
-  color: white;
+  height: 60vh;
+  width: 100%;
+  background: linear-gradient(to top, #c39cddcc, #e3f0ff),
+    url(../../../assets/icon/header1.jpg) no-repeat top center;
+  border-top: none;  
+
   .top-image {
     width: 100%;
     opacity: 0.5;

@@ -23,21 +23,28 @@
 }
 
 #details {
-  width: 65%;
-  margin-top: 1%;
-  color: white;
-  font-weight: 300;
-  background: url("../../../assets/icon/header2.jpg") no-repeat center center; 
-  background-size: cover;
-  border-radius: 2.5rem;
+  // width: 65%;
+  // margin-top: 1%;
+  // color: white;
+  // font-weight: 300;
+  // background: url("../../../assets/icon/header2.jpg") no-repeat center center; 
+  // background-size: cover;
+  // border-radius: 2.5rem;
   padding: 1rem 1rem;
+  text-align: center;
+  // height: 60vh;
+  width: 100%;
+  background: linear-gradient(to top, #c39cddcc, #e3f0ff),
+    url(../../../assets/icon/header1.jpg) no-repeat top center;
+  // border-top: none;  
 }
 
 #body_details {
-  color: rgb(0, 0, 0);
-  background-color: rgba(255, 255, 255, 0.288);
-  border-radius: 2.5rem;
-  padding: 1rem 1rem;
+  background:none;
+  // color: rgb(0, 0, 0);
+  // background-color: rgba(255, 255, 255, 0.288);
+  // border-radius: 2.5rem;
+  // padding: 1rem 1rem;
 }
 
 .text123 {
