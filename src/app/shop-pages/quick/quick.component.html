@@ -1,24 +1,35 @@
 <div id="center container">
-  <div class="mx-auto" id="details">
+  <!-- <div class="mx-auto" id="details">
     <div class="card-body" id="body_details">
       <h2 class="card-title mb-0">
         Freely Choose Artistic Floral Bouquets Made by our own Talented Florists
       </h2>
     </div>
-  </div>
-  
+  </div> -->
+
   <div class="mx-auto" style="width: 65%; margin-top: 1%">
     <div class="form-group mx-auto mt-1" id="quickgroup">
-
+      <div class="showcase">
+        <h3 class="mt-5" id="line-style" style="text-align: center">
+          <span class="explorer">Choose Artistic Floral Bouquets</span>
+        </h3>
+        <h3 class="mb-5" id="line-style" style="text-align: center">
+          <span style="font-family: 'bebas'"
+            >made by our own Talented Florists</span
+          >
+        </h3>
+      </div>
       <div class="form-group mx-auto mt-3 mb-0 text-center" style="width: 100%">
-        <h1 for="selectInput" class="mt-5 mb-4" style="font-size: 2rem;font-weight: 500;">BOUQUETS</h1>
-
-        <mat-form-field appearance="fill" class="mt-0 mb-0" style="width: 52rem;">
+        <mat-form-field
+          appearance="fill"
+          class="mt-0 mb-0"
+          style="width: 52rem"
+        >
           <mat-label>Price Range</mat-label>
           <mat-select
             id="selectInput"
             [(value)]="selected"
-            id="selectInput"
+            panelClass="dropDown-seasons-panel"
             (selectionChange)="priceChange($event.value)"
           >
             <mat-option value="0">None</mat-option>
@@ -30,7 +41,7 @@
         </mat-form-field>
       </div>
 
-      <div class="row" id="gridInput">
+      <div class="row mb-5" id="gridInput">
         <div
           class="col-sm mt-2 d-flex justify-content-between"
           *ngFor="let flower of flowers; let i = index"

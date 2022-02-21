@@ -211,11 +211,11 @@ h3 {
   text-align: center;
   border-bottom: 1px solid #b8b7b7;
   line-height: 0.1em;
-  margin: 10px 0 20px;
+  margin: 3rem 10px 2rem 10px;
 }
 
 #line-style span {
-  background: #fff;
+  background: #f3f8fc;
   text-align: center;
   padding: 0 10px;
 }
@@ -236,6 +236,12 @@ h3 {
   align-items: center;
   width: 100%;
   height: 50vh;
+
+  h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-family: "bebas";
+  }
 }
 .box {
   width: 100%;
@@ -278,14 +284,18 @@ h3 {
 }
 .card-title {
   margin: 5px 0;
-  font-size: 1.25rem;
+  font-size: 2rem;
   letter-spacing: 1px;
   text-align: center;
+
+  font-family: "bebas";
 }
 .card-excerpt {
-  font-size: 0.75rem;
+  font-size: 1rem;
   letter-spacing: 1px;
   text-align: center;
+
+  font-family: "bebas";
 }
 .card:hover {
   box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.2);
@@ -301,6 +311,16 @@ h3 {
   .card {
     width: 49%;
   }
+
+  .title {
+    font-family: "bebas";
+    font-size: 2rem !important;
+  }
+
+  .sub-title {
+    font-family: "bebas";
+    font-size: 1rem !important;
+  }
 }
 @media screen and (max-width: 480px) {
   .box h1 {
@@ -313,6 +333,16 @@ h3 {
     margin-bottom: 20px;
     width: 80%;
   }
+
+  .title {
+    font-family: "bebas";
+    font-size: 2rem !important;
+  }
+
+  .sub-title {
+    font-family: "bebas";
+    font-size: 1rem !important;
+  }
 }
 
 .top-header {
@@ -322,7 +352,7 @@ h3 {
   width: 100%;
   background: linear-gradient(to top, #c39cddcc, #e3f0ff),
     url(../../../assets/icon/header1.jpg) no-repeat top center;
-  border-top: none;  
+  border-top: none;
 
   .top-image {
     width: 100%;
@@ -405,18 +435,22 @@ h3 {
   }
 
   .title {
-    font-size: 2.5rem;
+    font-size: 4vw;
     text-transform: uppercase;
+    font-family: "bebas";
+    white-space: initial;
   }
 
   .sub-title {
     font-size: 1.5vw;
     text-transform: lowercase;
+    font-family: "bebas";
+    padding-top: 1rem;
   }
 
   .explorer {
     font-size: 3vh;
-    background-color: none;
+    background-color: #f3f8fc;
   }
 }
 
@@ -462,15 +496,17 @@ h3 {
   }
 
   .title {
-    font-size: 1rem;
+    font-size: 2.5rem;
     text-transform: uppercase;
     margin: 0;
+    font-family: "bebas";
   }
 
   .sub-title {
     font-size: 0.8rem;
     text-transform: lowercase;
     margin: 0;
+    font-family: "bebas";
   }
 
   .showcase {
@@ -529,6 +565,9 @@ h3 {
     }
 
     .box {
+      text-transform: uppercase;
+      font-family: "bebas";
+
       background-color: transparent;
       border-radius: 3px;
       color: #fff;
@@ -565,6 +604,7 @@ h3 {
         border-right: 20px solid #fff;
         box-sizing: border-box;
       }
+
       .fas {
         font-size: 25px;
         height: 50px;
@@ -605,11 +645,13 @@ h3 {
           line-height: 1.5;
           box-sizing: border-box;
           h3 {
-            font-size: 30px;
+            font-size: 3rem;
             margin-bottom: 5px;
+            font-family: "bebas";
           }
           p {
-            font-size: 15px;
+            font-size: 1.5rem;
+            font-family: "bebas";
           }
         }
       }

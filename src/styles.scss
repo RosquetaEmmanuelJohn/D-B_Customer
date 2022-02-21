@@ -81,6 +81,11 @@ $bloom-pod-web-theme: mat-light-theme(
   font-family: "Liberal";
 }
 
+@font-face {
+  src: local("bebas"), url(./assets/fonts/bebas.ttf) format("truetype");
+  font-family: "bebas";
+}
+
 html,
 body {
   height: 100%;
@@ -234,4 +239,11 @@ b {
   //   max-width: 1024px;
   //   margin: 0 auto;
   // }
+}
+
+.dropDown-seasons-panel {
+  border-radius: 10px !important;
+  border: 1px solid gray !important;
+  position: absolute !important;
+  top: 50px !important;
 }
