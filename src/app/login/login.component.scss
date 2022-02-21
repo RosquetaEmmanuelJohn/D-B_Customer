@@ -1,8 +1,8 @@
 .contain {
-  min-width: 100%;
-  max-width: 100%;
-  min-height: 100%;
-  max-height: 100%;
+  // min-width: 100%;
+  // max-width: 100%;
+  // min-height: 100%;
+  // max-height: 100%;
 }
 
 .logo_img {
@@ -159,4 +159,8 @@ input {
   background: transparent;
   color: white;
   // width: 100%;
+}
+
+@media screen and (max-width: 540px) {
+  
 }
