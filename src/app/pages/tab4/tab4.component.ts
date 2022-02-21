@@ -12,7 +12,7 @@ import { UserService } from 'src/app/services/user.service';
 @Component({
   selector: 'app-tab4',
   templateUrl: './tab4.component.html',
-  styleUrls: ['./tab4.component.scss']
+  styleUrls: ['./tab4.component.scss'],
 })
 export class Tab4Component implements OnInit {
   OTP: any;
@@ -20,12 +20,15 @@ export class Tab4Component implements OnInit {
   token: any;
   user_objects: any;
 
-
-  showSpinner:boolean = false;
-  checkBox: boolean = false;
+  password: string;
   passwordType: string = 'password';
+  passwordIcon: string = 'visibility_off';
+
+  showSpinner: boolean = false;
+  checkBox: boolean = false;
+
   show = true;
-  
+
   constructor(
     private dataService: DataService,
     public dialog: MatDialog,
@@ -54,11 +57,9 @@ export class Tab4Component implements OnInit {
       try {
         this.OTP = result.data;
         this.user_OTP();
-      }
-      catch(err) {
+      } catch (err) {
         // console.log(err);
       }
-      
     });
   }
 
@@ -191,7 +192,7 @@ export class Tab4Component implements OnInit {
       letters[Math.floor(Math.random() * letters.length)] +
       numbers[Math.floor(Math.random() * numbers.length)] +
       letters[Math.floor(Math.random() * letters.length)];
-      
+
     let u_f = e.target[0].value;
     let u_l = e.target[1].value;
     let u_e = e.target[2].value;
@@ -203,52 +204,63 @@ export class Tab4Component implements OnInit {
       otp +
       '</h2></u><h5>- Bloom Pod Administrator</h5></div></div>';
 
-      const dialogRef = this.dialog.open(InformationComponent, {
-        id: 'termsandcons',
-        width:'50%',
-      });
+    const dialogRef = this.dialog.open(InformationComponent, {
+      id: 'termsandcons',
+      width: '50%',
+    });
 
-      dialogRef.afterClosed().subscribe(result => {
-        // console.log(result);
-        if (result == true) {
-          this.showSpinner = true;
-          this.dataService
-          .processData(btoa('mailer').replace('=', ''), {email: u_e, body}, 2)!
-          .subscribe((res: any)=>{
+    dialogRef.afterClosed().subscribe((result) => {
+      // console.log(result);
+      if (result == true) {
+        this.showSpinner = true;
+        this.dataService
+          .processData(
+            btoa('mailer').replace('=', ''),
+            { email: u_e, body },
+            2
+          )!
+          .subscribe((res: any) => {
             let payload = this.dataService.decrypt(res.a);
-            if (payload.data == "Message has been sent") {
+            if (payload.data == 'Message has been sent') {
               this.dataService
-                .processData(btoa('register').replace('=', ''), {u_e, u_l, u_p, u_f, u_a, otp}, 2)!
-                  .subscribe((res: any)=>{
+                .processData(
+                  btoa('register').replace('=', ''),
+                  { u_e, u_l, u_p, u_f, u_a, otp },
+                  2
+                )!
+                .subscribe(
+                  (res: any) => {
                     let payload = this.dataService.decrypt(res.a);
-                  if (payload.status['message'] == "Registered successfully") {
+                    if (
+                      payload.status['message'] == 'Registered successfully'
+                    ) {
+                      this.showSpinner = false;
+                      this.snackbar(payload.status['message']);
+                      window.location.reload();
+                    } else if (res.error) {
+                      this.showSpinner = false;
+                      this.snackbar(res.error);
+                    }
+                  },
+                  (er) => {
                     this.showSpinner = false;
-                    this.snackbar(payload.status['message']);
-                    window.location.reload();
-                  } else if (res.error) {
-                    this.showSpinner = false;
-                    this.snackbar(res.error);
+                    this.snackbar('Email Already Used');
                   }
-                },
-                (er) => {
-                  this.showSpinner = false;
-                  this.snackbar('Email Already Used');
-                });
+                );
             } else if (res.error) {
               this.showSpinner = false;
               this.snackbar(res.error);
             }
           });
-        }
-        else {
-          console.log("Cancel");
-        }
-      });
+      } else {
+        console.log('Cancel');
+      }
+    });
   }
-  
+
   snackbar(message: string) {
     this._snackBar.open(message, '', {
-      duration: 1000
+      duration: 1000,
     });
   }
 }
