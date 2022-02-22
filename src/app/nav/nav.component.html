@@ -255,21 +255,15 @@
       >
       <h1 class="mt-2 ml-3 justify-content-start">CART</h1>
       <div class="Cartoverlay-content">
-        <div
-          *ngIf="!cart_obj"
-          style="text-align: center; font-size: medium"
-        >
+        <div *ngIf="!cart_obj" style="text-align: center; font-size: medium">
           <p>Add bouquets to Cart NOW! There's nothing here.</p>
           <br />
           <div class="card" style="background: none">
-            <div
-              class="card-body"
-              style="cursor: pointer; font-size: small"
-            >
+            <div class="card-body" style="cursor: pointer; font-size: small">
               <p>
                 “Flowers dont worry about how theyre going to bloom.
-                <br />They just open up and turn toward the light and that
-                makes them beautiful.” <br />Jim Carrey
+                <br />They just open up and turn toward the light and that makes
+                them beautiful.” <br />Jim Carrey
               </p>
             </div>
           </div>
@@ -290,8 +284,7 @@
                       <ng-container
                         class="mb-0"
                         *ngIf="
-                          order.order_flower ==
-                            'Generated Flower Bouquet';
+                          order.order_flower == 'Generated Flower Bouquet';
                           else quick_img
                         "
                       >
@@ -301,10 +294,7 @@
                               <div class="text123">Click to Preview</div>
                             </div>
                             <img
-                              style="
-                                max-width: 100%;
-                                transition: 0.5s ease;
-                              "
+                              style="max-width: 100%; transition: 0.5s ease"
                               class="rounded float-left"
                               id="img-view"
                               src="../../../assets/icon/benef_log.jpg"
@@ -339,10 +329,7 @@
                               <div class="text123">Click to Preview</div>
                             </div>
                             <img
-                              style="
-                                max-width: 100%;
-                                transition: 0.5s ease;
-                              "
+                              style="max-width: 100%; transition: 0.5s ease"
                               class="rounded float-left"
                               id="img-view"
                               src="http://bloompod.api.gc-ecommerceapp.com/bloompod_api/quick/{{
@@ -361,10 +348,7 @@
                     </td>
                     <td>
                       <div class="d-block">
-                        <h1
-                          id="details"
-                          class="justify-content-end mb-0 mt-0"
-                        >
+                        <h1 id="details" class="justify-content-end mb-0 mt-0">
                           ₱{{ order.order_totalprice | number: "1.2-2" }}
                         </h1>
                       </div>
@@ -614,7 +598,7 @@
         </nav>
       </header>
     </mat-toolbar>
-    <section>
+    <section class="bg-white">
       <router-outlet></router-outlet>
     </section>
   </mat-sidenav-content>
