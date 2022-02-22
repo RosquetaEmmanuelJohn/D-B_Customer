@@ -232,6 +232,7 @@ export class NavComponent implements OnInit {
         } else if (result.event == 'checkout') {
           // console.log(result.event);
           this.closeCart();
+          this.sidenav.close();
           this.snackbar('Please fill out all the required fields');
         } else {
           console.log('Closed');
