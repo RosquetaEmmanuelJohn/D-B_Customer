@@ -212,6 +212,7 @@ h3 {
   border-bottom: 1px solid #b8b7b7;
   line-height: 0.1em;
   margin: 3rem 10px 2rem 10px;
+  margin-top: 10rem;
 }
 
 #line-style span {
@@ -238,7 +239,7 @@ h3 {
   height: 50vh;
 
   h1 {
-    font-size: 3rem;
+    font-size: 4vw;
     text-transform: uppercase;
     font-family: "bebas";
   }
@@ -247,6 +248,8 @@ h3 {
   width: 100%;
   max-width: 800px;
   padding: 15px;
+
+  margin-top: 10rem;
 }
 .box h1 {
   // font-family: Liberal;
@@ -258,7 +261,7 @@ h3 {
   text-align: center;
 }
 .cards {
-  margin-top: 10%;
+  margin-top: 5rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -267,9 +270,18 @@ h3 {
 .card {
   width: 32%;
   padding: 15px 10px;
-  background-color: #c39cddcc;
+
   border-radius: 3px;
   transition: transform 0.3s;
+}
+
+.triple-cards {
+  box-shadow: #c39dcc 0px 0px 0px 2px inset,
+    rgb(255, 255, 255) 10px -10px 0px -3px, #d3c6e5 10px -10px,
+    rgb(255, 255, 255) 20px -20px 0px -3px, #d9d5ee 20px -20px,
+    rgb(255, 255, 255) 30px -30px 0px -3px, #dee2f6 30px -30px,
+    rgb(255, 255, 255) 40px -40px 0px -3px, #e3f0ff 40px -40px;
+  margin-top: 10%;
 }
 .card a {
   color: inherit;
@@ -277,7 +289,12 @@ h3 {
 }
 .card-thumb {
   width: 100%;
-  text-align: center;
+
+  img {
+    padding: 10px;
+    color: "white";
+    background-color: #dee2f6;
+  }
 }
 .card-thumb img {
   width: 80px;
@@ -286,16 +303,12 @@ h3 {
   margin: 5px 0;
   font-size: 2rem;
   letter-spacing: 1px;
-  text-align: center;
 
   font-family: "bebas";
 }
 .card-excerpt {
   font-size: 1rem;
-  letter-spacing: 1px;
-  text-align: center;
-
-  font-family: "bebas";
+  padding-top: 10%;
 }
 .card:hover {
   box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.2);
@@ -401,6 +414,9 @@ h3 {
       margin: 0.3rem;
       text-align: center;
       padding: 0rem 0rem;
+      h3 {
+        font-family: "bebas";
+      }
 
       h4 {
         color: #08595e;
@@ -449,8 +465,9 @@ h3 {
   }
 
   .explorer {
-    font-size: 3vh;
-    background-color: #f3f8fc;
+    font-size: 4vw;
+    font-family: "bebas";
+    white-space: normal;
   }
 }
 
@@ -517,10 +534,6 @@ h3 {
     padding: 5px 8px;
     text-align: justify;
   }
-
-  .explorer {
-    font-size: 2vh;
-  }
 }
 
 .card-title {
@@ -542,6 +555,8 @@ h3 {
   .card-container {
     padding: 10rem;
     overflow: hidden;
+    background: white;
+    margin-top: 15rem;
   }
 
   .card {

@@ -12,27 +12,14 @@
   </div>
 </div>
 
-<div class="showcase">
+<div class="showcase bg-white">
   <h3 class="mb-5" id="line-style" style="text-align: center">
-    <span class="explorer">Explore Our Products</span>
+    <span class="explorer bg-white">Explore Our Products</span>
   </h3>
 
   <div class="row">
     <div class="col-sm column-slider">
       <div style="text-align: center; margin: 0; padding: 0">
-        <!-- <ng-image-slider
-          #nav
-          style="cursor: pointer"
-          [images]="orders"
-          [infinite]="true"
-          [autoSlide]="1"
-          slideImage="2"
-          [animationSpeed]="2"
-          [manageImageRatio]="true"
-          [imagePopup]="false"
-          (imageClick)="bouquet_click($event)"
-        ></ng-image-slider> -->
-
         <p-carousel
           [value]="obj_flowers"
           styleClass="custom-carousel"
@@ -61,12 +48,6 @@
                     ₱{{ product.quick_price | number: "1.2" }}
                   </h4>
                 </div>
-
-                <!-- <div class="button-below">
-                <button type="button">
-                  <ion-icon slot="icon-only" name="checkmark-outline"></ion-icon>
-                </button>
-              </div> -->
               </div>
             </div>
           </ng-template>
@@ -75,14 +56,6 @@
     </div>
     <div class="col-sm column-slider">
       <div style="text-align: center; margin: 0; padding: 0">
-        <!-- <ng-image-slider
-          #nav
-          [images]="order_flowers"
-          [infinite]="true"
-          [autoSlide]="1"
-          slideImage="1"
-        ></ng-image-slider> -->
-
         <p-carousel
           [value]="flowers"
           styleClass="custom-carousel"
@@ -111,12 +84,6 @@
                     ₱{{ product.flower_price | number: "1.2" }}
                   </h4>
                 </div>
-
-                <!-- <div class="button-below">
-                <button type="button">
-                  <ion-icon slot="icon-only" name="checkmark-outline"></ion-icon>
-                </button>
-              </div> -->
               </div>
             </div>
           </ng-template>
@@ -126,13 +93,16 @@
   </div>
 </div>
 
-<div class="jumbotron mt-3">
+<div class="bg-white">
   <div id="container">
     <div class="box">
-      <h1>Details & Blooms Events and Flowers</h1>
+      <h3 style="text-align: center; margin-top: 10rem">Services</h3>
+      <h3 class="explorer" style="text-align: center">
+        Details & Blooms Events and Flowers
+      </h3>
 
       <div class="cards">
-        <article class="card">
+        <article class="card triple-cards">
           <a href="#/nav/quick">
             <figure class="card-thumb">
               <img src="../../../assets/icon/paintbrush.svg" alt="paint" />
@@ -147,7 +117,7 @@
           </a>
         </article>
 
-        <article class="card">
+        <article class="card triple-cards">
           <a href="#/nav/quick">
             <figure class="card-thumb">
               <img src="../../../assets/icon/idea.svg" alt="idea" />
@@ -163,7 +133,7 @@
             </div>
           </a>
         </article>
-        <article class="card">
+        <article class="card triple-cards">
           <a href="#/nav/custom">
             <figure class="card-thumb">
               <img src="../../../assets/icon/robot.svg" alt="robot" />
@@ -207,29 +177,15 @@
   </div>
 </div> -->
 
-<div class="responsive-card">
-  <div class="card-container">
+<div class="responsive-card bg-white">
+  <div class="card-container bg-white">
     <div class="float-layout">
       <div class="card-image">
         <img src="../../../assets/icon/home_image3.jpg" />
         <div class="card">
-          <!-- <h1 class="card-title">What we offer</h1>
-          <p class="card-desc">
-            a hassle and worry free occassion package.Let Details & Blooms take
-            care of your event.
-          </p> -->
-
-          <!-- <div class="card-title">What we offer</div>
-          <div class="card-desc">
-            a hassle and worry free occassion package.Let Details & Blooms take
-            care of your event.
-          </div> -->
-
           <div class="box">
-            <!-- <i class="fas fa-quote-left fa2"></i> -->
             <i class="fas material-icons fa2">format_quote</i>
             <div class="text">
-              <!-- <i class="fas fa-quote-right fa1"></i> -->
               <i class="fas material-icons fa1">format_quote</i>
 
               <div>
