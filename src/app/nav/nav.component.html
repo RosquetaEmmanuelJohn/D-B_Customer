@@ -226,8 +226,9 @@
         class="nav-link"
         title="Profile"
         *ngIf="show_cart == true"
+        (click)="sidenav.close()"
         href="#/nav/profile"
-        >Person</a
+        >Profile</a
       >
 
       <!-- <a
@@ -249,7 +250,7 @@
       >
     </nav>
 
-    <div id="myCart1" class="Cartoverlay1">
+    <div id="myCart1" class="Cartoverlay1" *ngIf="show_cart">
       <a href="javascript:void(0)" class="closebtn" (click)="closeCart()"
         >&times;</a
       >
