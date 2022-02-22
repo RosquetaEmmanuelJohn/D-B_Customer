@@ -46,7 +46,7 @@ export class AuthGuard implements CanActivate {
     //       returnUrl: state.url
     //     },
     //   });
-    this._router.navigate(['nav']);
+    // this._router.navigate(['nav']);
     let snackBarRef = this._snackBar.open('You have to log in first', 'Login', {
       duration: 3000,
       horizontalPosition: 'center',

@@ -8,10 +8,10 @@
   <div class="col mt-0">
     
       <div id="center container">
-          <div class="mx-auto" style="width: 100%;">
-              <div class="card-body" style="text-align: center;display: block;justify-content: center;">
+          <div class="mx-auto">
+              <div class="card-body" style="text-align: center;">
 
-                  <mat-card class="example-card mat-elevation-z0" style="width: 330px;" >
+                  <mat-card class="example-card mat-elevation-z0" id="image-card" style="width: 330px;" >
                       <mat-card-header>
                           <div style="text-align:center;">
                               <mat-card-title>{{flower_name}}</mat-card-title>
@@ -85,13 +85,6 @@
         </ng-template>
 
         <mat-card-actions class="flex">
-            <!-- <button 
-                id="quick_btn2"
-                mat-flat-button color="success" 
-                (click)="checkout()" 
-                matTooltip="Proceed to buy the product" 
-                matTooltipPosition='above'><mat-icon>check_circle</mat-icon> Checkout
-            </button> -->
             <button
                 class="mt-auto align-self-end"
                 id="quick_buy"

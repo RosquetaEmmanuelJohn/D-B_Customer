@@ -200,27 +200,36 @@
 
 <mat-sidenav-container>
   <mat-sidenav #sidenav mode="over">
-    <label> <b style="font-family: 'Liberal'">DETAILS & BLOOMS</b></label>
-    <hr />
+    <!-- <mat-icon (click)="sidenav.close()">menu</mat-icon>
+    <label> 
+      <b style="font-family: 'Liberal'">DETAILS & BLOOMS</b>
+    </label>
+    <hr /> -->
+    
+    <label >
+      <mat-icon (click)="m_cart()" style="font-weight: 500;font-size: 2rem;">menu</mat-icon>
+      <b class="ml-3" style="vertical-align: top;">DETAILS & BLOOMS</b>
+    </label>
+
     <nav>
       <a routerLink="home" (click)="clickHandler()" routerLinkActive="active"
         >Home</a
       >
-      <a routerLink="about" (click)="clickHandler()" routerLinkActive="active"
+      <a routerLink="quick" (click)="clickHandler()" routerLinkActive="active"
         >Florists Choice</a
       >
-      <a routerLink="about" (click)="clickHandler()" routerLinkActive="active"
+      <a routerLink="custom" (click)="clickHandler()" routerLinkActive="active"
         >Customers Choice</a
       >
-      <a routerLink="login" (click)="clickHandler()" routerLinkActive="active"
+      <a routerLink="toPay" (click)="clickHandler()" routerLinkActive="active"
         >To Pay</a
       >
-      <a routerLink="sign-up" (click)="clickHandler()" routerLinkActive="active"
+      <a routerLink="service" (click)="clickHandler()" routerLinkActive="active"
         >Service</a
       >
-      <a routerLink="contact" (click)="clickHandler()" routerLinkActive="active"
+      <!-- <a routerLink="contact" (click)="clickHandler()" routerLinkActive="active"
         >About</a
-      >
+      > -->
 
       <a
         class="nav-link"
@@ -442,9 +451,9 @@
                 >Service</a
               >
             </li>
-            <li class="nav-item" id="nav-items">
+            <!-- <li class="nav-item" id="nav-items">
               <a class="nav-link" title="About Us" (click)="AboutUs()">About</a>
-            </li>
+            </li> -->
 
             <li class="nav-item" id="nav-items" *ngIf="show_cart == true">
               <a class="nav-link" title="Profile" href="#/nav/profile"

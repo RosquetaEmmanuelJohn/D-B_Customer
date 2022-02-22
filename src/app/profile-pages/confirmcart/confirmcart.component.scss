@@ -126,3 +126,10 @@
       color: #6e6e6e;
     }
   }
+
+@media screen and (max-width: 450px) {
+  .card-body{
+    // background-color: aqua;
+    margin-left: -70px;
+  }
+}
