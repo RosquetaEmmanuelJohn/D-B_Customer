@@ -612,6 +612,66 @@
     </mat-toolbar>
     <section>
       <router-outlet></router-outlet>
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              <mat-list style="text-align: left"
+                ><h4 class="col_title">My Account</h4>
+                <mat-divider></mat-divider>
+                <mat-list-item><a title="Profile">My Profile</a></mat-list-item>
+                <mat-list-item
+                  ><a title="My Orders">My Orders</a></mat-list-item
+                >
+              </mat-list>
+            </div>
+            <div class="col-sm">
+              <mat-list style="text-align: left"
+                ><h4 class="col_title">Information</h4>
+                <mat-divider></mat-divider>
+                <mat-list-item><a title="About Us">About Us</a></mat-list-item>
+
+                <mat-list-item
+                  ><a title="Contact Us">Contact Us</a></mat-list-item
+                >
+              </mat-list>
+            </div>
+            <div class="col-sm">
+              <mat-list style="text-align: left"
+                ><h4 class="col_title">Shop Options</h4>
+                <mat-divider></mat-divider>
+                <mat-list-item
+                  ><a title="Florist Choice Bouquet"
+                    >Florist Choice Bouquet</a
+                  ></mat-list-item
+                >
+                <mat-list-item
+                  ><a title="Customer Choice Bouquet"
+                    >Customer Choice Bouquet</a
+                  ></mat-list-item
+                >
+              </mat-list>
+            </div>
+            <div class="col-sm">
+              <mat-list style="text-align: left"
+                ><h4 class="col_title">Beneficiary</h4>
+                <mat-divider></mat-divider>
+                <!-- <img class="benef_logo" src="../../../assets/icon/benef_logo.png" /> -->
+                <a
+                  style="
+                    color: rgb(2, 34, 12);
+                    font-weight: 500;
+                    text-align: center;
+                  "
+                  >Detials and Blooms Events and Flowers provides assistance to
+                  event needs and cater to flower arrangements and styling
+                  requirements for all occasions.</a
+                >
+              </mat-list>
+            </div>
+          </div>
+        </div>
+      </footer>
     </section>
   </mat-sidenav-content>
 </mat-sidenav-container>
