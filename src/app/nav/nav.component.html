@@ -205,10 +205,12 @@
       <b style="font-family: 'Liberal'">DETAILS & BLOOMS</b>
     </label>
     <hr /> -->
-    
-    <label >
-      <mat-icon (click)="m_cart()" style="font-weight: 500;font-size: 2rem;">menu</mat-icon>
-      <b class="ml-3" style="vertical-align: top;">DETAILS & BLOOMS</b>
+
+    <label>
+      <mat-icon (click)="m_cart()" style="font-weight: 500; font-size: 2rem"
+        >menu</mat-icon
+      >
+      <b class="ml-3" style="vertical-align: top">DETAILS & BLOOMS</b>
     </label>
 
     <nav>
@@ -373,7 +375,7 @@
     </div>
   </mat-sidenav>
 
-  <mat-sidenav-content>
+  <mat-sidenav-content style="background: white">
     <mat-toolbar
       color="primary"
       style="height: 4rem; background: #e3f0ff; color: black"
@@ -608,7 +610,7 @@
         </nav>
       </header>
     </mat-toolbar>
-    <section class="bg-white">
+    <section>
       <router-outlet></router-outlet>
     </section>
   </mat-sidenav-content>
