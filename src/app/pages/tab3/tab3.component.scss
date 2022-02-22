@@ -53,7 +53,7 @@
   padding: 1rem 1rem;
 }
 #main_card {
-  width: 50%; 
+  width: 60%; 
   margin-top: 1%; 
   margin-bottom: 1%;
   background-color: none;
@@ -200,4 +200,33 @@
     vertical-align: middle; 
     border: none;
     margin-bottom: 0;
+}
+
+.showcase {
+  color: rgb(2, 34, 12);
+  background-color: none;
+  text-align: center;
+  padding: 20px 30px;
+  text-align: justify;
+}
+.explorer {
+  font-size: 5vw;
+  background-color: none;
+
+  text-transform: uppercase;
+  font-family: "bebas";
+}
+
+@media screen and (max-width: 565px) { 
+  .explorer {
+    font-size: 10vw;
+    background-color: none;
+  
+    text-transform: uppercase;
+    font-family: "bebas";
+  }
+  #main_card {
+    width: 90%; 
+  }
+
 }

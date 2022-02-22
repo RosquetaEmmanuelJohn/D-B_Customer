@@ -38,16 +38,16 @@
     font-size: 150%;
 }
 
-#details {
-    width: 65%;
-    margin-top: 1%;
-    color: white;
-    font-weight: 300;
-    background: url("../../../assets/icon/header2.jpg") no-repeat center center; 
-    background-size: cover;
-    border-radius: 2.5rem;
-    padding: 1rem 1rem;
-}
+// #details {
+//     width: 65%;
+//     margin-top: 1%;
+//     color: white;
+//     font-weight: 300;
+//     background: url("../../../assets/icon/header2.jpg") no-repeat center center; 
+//     background-size: cover;
+//     border-radius: 2.5rem;
+//     padding: 1rem 1rem;
+// }
 
 #body_details {
     color: rgb(0, 0, 0);
@@ -128,3 +128,60 @@
       color: #6e6e6e;
     }
   }
+
+  .showcase {
+    color: rgb(2, 34, 12);
+    background-color: none;
+    text-align: center;
+    padding: 20px 30px;
+    text-align: justify;
+  }
+  .explorer {
+    font-size: 5vw;
+    background-color: none;
+  
+    text-transform: uppercase;
+    font-family: "bebas";
+  }
+
+  
+#side-btn-mob {
+    // display: none;
+    visibility: hidden;
+    border-radius: 100%;
+    background: none;
+}
+
+@media screen and (max-width: 850px) { 
+    #side-btn, #side-btnn {
+        // width: 10%;
+        // height: 10%;
+        display: none;
+        border: none;
+        background: none;
+        color: rgb(0, 0, 0);
+    }
+    #side-btn-mob {
+        visibility: visible;
+    }
+}
+
+@media screen and (max-width: 700px) { 
+    #bouquet_card {
+        background: none;
+        width: 330px;
+        color: rgb(0, 0, 0);
+        margin-left: -80px;
+        // justify-content: center;
+    }
+}
+
+@media screen and (max-width: 400px) { 
+    #bouquet_card {
+        background: none;
+        width: 330px;
+        color: rgb(0, 0, 0);
+        margin-left: -110px;
+        // justify-content: center;
+    }
+}

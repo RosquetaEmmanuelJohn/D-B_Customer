@@ -1,7 +1,18 @@
-<div class="card mx-auto mb-0 mt-1" id="details">
-    <div class="card-body" id="body_details">
+<div class="mx-auto mb-0 mt-1">
+    <!-- <div class="card-body" id="body_details">
         <h2 class="card-title">Be Artistic Yourself and Create Combinations of Flowers</h2>
-    </div>
+    </div> -->
+
+    <div class="showcase">
+        <h3 class="mt-5" id="line-style" style="text-align: center">
+          <span class="explorer">Create Combinations of Flowers</span>
+        </h3>
+        <h3 class="mb-5" id="line-style" style="text-align: center">
+          <span style="font-family: 'bebas'; font-size: 1.5vw"
+            >Be Artistic Yourself</span
+          >
+        </h3>
+      </div>
 </div>
 <div id="center container mt-0">
     <div class="card mx-auto" id="main_card">
@@ -9,7 +20,7 @@
             
             <div class="d-flex">
                 <div class="col">
-                    <button (click)="history()" id="side-btn" value=""><mat-icon style="vertical-align: middle;transform: scale(4);">keyboard_arrow_left</mat-icon></button>
+                    <button (click)="history()" id="side-btn" value=""><mat-icon style="transform: scale(4);">keyboard_arrow_left</mat-icon></button>
                 </div>
     
                 <div class="col">
@@ -21,7 +32,9 @@
                                 <div [innerHtml]="content"></div>
                             </mat-card-content>
                         <mat-card-actions>
-                            <button id="addtocart" (click)="add_to_cart()"><mat-icon class="mt-1">shopping_cart</mat-icon></button>
+                            <button (click)="history()" id="side-btn-mob" value=""><mat-icon class="mt-1">keyboard_arrow_left</mat-icon></button>
+                            <button class="mr-3 ml-3" id="addtocart" (click)="add_to_cart()"><mat-icon class="mt-1">shopping_cart</mat-icon></button>
+                            <button (click)="gen()" id="side-btn-mob" value=""><mat-icon class="mt-1">local_florist</mat-icon></button>
                         </mat-card-actions>
                     </mat-card>
                 </div>

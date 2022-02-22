@@ -122,3 +122,13 @@ button {
     }
   }
 }
+
+#input-range {
+  width: 50rem;
+}
+
+@media screen and (max-width: 1023px) { 
+  #input-range {
+    width: auto;
+  }
+}

@@ -161,6 +161,16 @@ button {
   }
 }
 
+#input-range {
+  width: 50rem;
+}
+
+@media screen and (max-width: 1023px) { 
+  #input-range {
+    width: auto;
+  }
+}
+
 // .content {
 //   padding-start: 10rem;
 //   padding-end: 10rem;
