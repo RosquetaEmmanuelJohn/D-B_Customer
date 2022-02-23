@@ -29,7 +29,24 @@
   font-size: 1rem;
 }
 
-@media screen and (max-width: 700px) {
+.header-top {
+  .showcase {
+    color: rgb(2, 34, 12);
+    background-color: none;
+    text-align: center;
+    padding: 20px 30px;
+    text-align: justify;
+  }
+  .explorer {
+    font-size: 5vw;
+    background-color: none;
+
+    text-transform: uppercase;
+    font-family: "bebas";
+  }
+}
+
+@media screen and (max-width: 565px) {
   .list-group-item {
     display: block;
     width: 100% !important;
@@ -38,5 +55,15 @@
   .col {
     min-width: 100%;
     max-width: 100%;
+  }
+
+  #main_card {
+    width: 90%;
+  }
+
+  .header-top {
+    .explorer {
+      font-size: 10vw;
+    }
   }
 }

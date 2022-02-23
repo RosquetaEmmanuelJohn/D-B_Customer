@@ -169,50 +169,6 @@ h3 {
   transition: box-shadow 0.3s ease-in-out;
 }
 
-// @media screen and (max-width: 540px) {
-//   #container {
-//     height: auto;
-//   }
-//   .box {
-//     padding: 20px;
-//   }
-//   .card {
-//     width: 49%;
-//   }
-
-//   .title {
-//     font-family: "bebas";
-//     font-size: 2rem !important;
-//   }
-
-//   .sub-title {
-//     font-family: "bebas";
-//     font-size: 1rem !important;
-//   }
-// }
-// @media screen and (max-width: 480px) {
-//   .box h1 {
-//     font-size: 1.5rem;
-//   }
-//   .cards {
-//     justify-content: center;
-//   }
-//   .card {
-//     margin-bottom: 20px;
-//     width: 80%;
-//   }
-
-//   .title {
-//     font-family: "bebas";
-//     font-size: 2rem !important;
-//   }
-
-//   .sub-title {
-//     font-family: "bebas";
-//     font-size: 1rem !important;
-//   }
-// }
-
 .card-title {
   text-transform: uppercase;
 }
@@ -338,6 +294,17 @@ h3 {
       width: 10rem;
       border-radius: 5px;
     }
+  }
+
+  .course {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    max-width: 100%;
+    justify-content: space-around;
+    overflow: hidden;
+    padding: 0;
   }
 
   .title {
