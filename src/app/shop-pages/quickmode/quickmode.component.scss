@@ -81,12 +81,24 @@ select {
 }
 
 #mode_form {
-  background: #e3f0ff;
-  color: rgb(0, 0, 0);
+  background: none;
+  color: rgb(2, 34, 12);
+  width: 65%; 
+  margin-top: 1%
 }
 
 label {
   font-size: 1rem;
+}
+
+.form-control {
+  height: calc(1.5em + 1.5rem + 2px);
+  background-color: none;
+}
+
+.custom-select {
+  height: calc(1.5em + 1.5rem + 2px);
+  background-color: none;
 }
 
 #spinner {
@@ -128,7 +140,32 @@ label {
 }
 
 #submit_btn {
-  background: #aacfa9;
-  color: rgb(0, 0, 0);
+  background: #3caa4a;
+  color: rgb(255, 255, 255);
   border: none;
+}
+
+.showcase {
+  color: rgb(2, 34, 12);
+  background-color: none;
+  text-align: center;
+  padding: 20px 30px;
+  text-align: justify;
+}
+.explorer {
+  font-size: 5vw;
+  background-color: none;
+
+  text-transform: uppercase;
+  font-family: "bebas";
+}
+
+@media screen and (max-width: 850px) { 
+  #mode_form {
+    width: 100%; 
+    // background-color: red;
+  }
+  .explorer {
+    font-size: 10vw;     
+  }
 }
