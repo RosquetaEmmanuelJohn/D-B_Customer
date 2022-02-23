@@ -354,7 +354,7 @@ h3 {
 
 /* Remove extra left and right margins, due to padding */
 .row {
-  margin: 20px -5px;
+  margin: 5rem -5px;
 }
 
 /* Clear floats after the columns */
@@ -392,6 +392,11 @@ img {
     display: block;
     margin-bottom: 20px;
   }
+
+  .sej-faname {
+    font-family: "bebas";
+    font-size: 5vw;
+  }
 }
 @media screen and (min-width: 601px) {
   h2 {
@@ -402,6 +407,12 @@ img {
   font {
     font-family: "bebas";
     font-size: 3vw;
+  }
+
+  .sej-faname {
+    margin-top: 1rem;
+    font-family: "bebas";
+    font-size: 1.5vw;
   }
 }
 

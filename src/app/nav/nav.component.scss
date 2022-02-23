@@ -314,7 +314,7 @@ a:hover {
     transition: 0.5s;
     border-left: 1px solid grey;
   }
-  
+
   .Cartoverlay-content {
     position: relative;
     top: 3%;
@@ -323,7 +323,7 @@ a:hover {
     // text-align: center;
     // margin-top: 30px;
   }
-  
+
   .Cartoverlay a {
     // padding: 8px;
     text-decoration: none;
@@ -332,12 +332,12 @@ a:hover {
     display: block;
     transition: 0.3s;
   }
-  
+
   .Cartoverlay a:hover,
   .Cartoverlay a:focus {
     color: #000000;
   }
-  
+
   .Cartoverlay .closebtn {
     position: absolute;
     top: 5px;
@@ -456,4 +456,8 @@ a:hover {
 #checknow {
   // display: none;
   font-size: 0%;
+}
+
+footer {
+  margin-top: 30vh;
 }
