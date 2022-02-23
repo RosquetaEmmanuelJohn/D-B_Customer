@@ -169,78 +169,6 @@ h3 {
   transition: box-shadow 0.3s ease-in-out;
 }
 
-@media screen and (min-width: 601px) {
-  .column-slider {
-    width: 50%;
-  }
-
-  .product-item {
-    padding: 0rem 1rem;
-    height: 22rem;
-    .product-item-content {
-      // border: 1px solid var(--surface-d);
-      // background: #f3f3f3;
-      // border-radius: 2.5rem;
-      margin: 0.3rem;
-      text-align: center;
-      padding: 0rem 0rem;
-      h3 {
-        font-family: "bebas";
-      }
-
-      h4 {
-        color: #08595e;
-        font-size: 1rem;
-        font-weight: 600;
-
-        position: fixed;
-        bottom: 0;
-      }
-    }
-
-    .product-image {
-      width: 15rem;
-
-      // box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-      border-radius: 5px;
-    }
-  }
-
-  .showcase {
-    color: rgb(2, 34, 12);
-    background-color: none;
-    text-align: center;
-    padding: 20px 30px;
-    text-align: justify;
-  }
-
-  .top-header {
-    img {
-      height: 35rem;
-    }
-  }
-
-  .title {
-    font-size: 4vw;
-    text-transform: uppercase;
-    font-family: "bebas";
-    white-space: initial;
-  }
-
-  .sub-title {
-    font-size: 1.5vw;
-    text-transform: lowercase;
-    font-family: "bebas";
-    padding-top: 1rem;
-  }
-
-  .explorer {
-    font-size: 4vw;
-    font-family: "bebas";
-    white-space: normal;
-  }
-}
-
 // @media screen and (max-width: 540px) {
 //   #container {
 //     height: auto;
@@ -282,71 +210,6 @@ h3 {
 //   .sub-title {
 //     font-family: "bebas";
 //     font-size: 1rem !important;
-//   }
-// }
-
-// /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
-// @media screen and (max-width: 600px) {
-//   .top-header {
-//     img {
-//       height: 13rem;
-//     }
-//   }
-
-//   .showcase {
-//     color: rgb(2, 34, 12);
-//     background-color: none;
-//     text-align: center;
-//     padding: 50px 80px;
-//     text-align: justify;
-//   }
-
-//   .product-item {
-//     .product-item-content {
-//       // border: 1px solid var(--surface-d);
-
-//       margin: 0.3rem;
-//       text-align: center;
-//       padding: 2rem 0;
-
-//       h4 {
-//         color: #08595e;
-//         font-size: 1rem;
-//         font-weight: 600;
-
-//         position: fixed;
-//         bottom: 0;
-//       }
-//     }
-
-//     .product-image {
-//       width: 10rem;
-//       // box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-//       border-radius: 5px;
-//     }
-//   }
-
-//   .title {
-//     font-size: 2.5rem;
-//     text-transform: uppercase;
-//     margin: 0;
-//     font-family: "bebas";
-//   }
-
-//   .sub-title {
-//     font-size: 0.8rem;
-//     text-transform: lowercase;
-//     margin: 0;
-//     font-family: "bebas";
-//   }
-
-//   .showcase {
-//     margin-top: 30%;
-//     color: rgb(2, 34, 12);
-//     background-color: none;
-//     text-align: center;
-//     padding: 5px 8px;
-//     text-align: justify;
 //   }
 // }
 
@@ -432,5 +295,162 @@ h3 {
       position: relative;
       width: 100%;
     }
+  }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+  #services {
+    text-align: center;
+    margin-top: 5rem;
+  }
+
+  .box h1 {
+    font-size: 1.5rem;
+  }
+  .cards {
+    justify-content: center;
+  }
+  .card {
+    margin-bottom: 20px;
+    width: 80%;
+  }
+
+  .product-item {
+    .product-item-content {
+      // border: 1px solid var(--surface-d);
+
+      margin: 0.3rem;
+      text-align: center;
+      padding: 2rem 0;
+
+      h4 {
+        color: #08595e;
+        font-size: 1rem;
+        font-weight: 600;
+
+        position: fixed;
+        bottom: 0;
+      }
+    }
+
+    .product-image {
+      width: 10rem;
+      border-radius: 5px;
+    }
+  }
+
+  .title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin: 0;
+    font-family: "bebas";
+  }
+
+  .sub-title {
+    font-size: 0.8rem;
+    text-transform: lowercase;
+    margin: 0;
+    font-family: "bebas";
+  }
+
+  .showcase {
+    color: rgb(2, 34, 12);
+    background-color: none;
+    text-align: center;
+    padding: 5px 8px;
+    text-align: justify;
+  }
+  #line-style {
+    width: 100%;
+    text-align: center;
+  }
+
+  #line-style span {
+    background: #f3f8fc;
+    text-align: center;
+  }
+
+  .explorer {
+    font-size: 7vw;
+    font-family: "bebas";
+    white-space: normal;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  #services {
+    text-align: center;
+    margin-top: 10rem;
+  }
+  .column-slider {
+    width: 50%;
+  }
+
+  .product-item {
+    padding: 0rem 1rem;
+    height: 22rem;
+    .product-item-content {
+      // border: 1px solid var(--surface-d);
+      // background: #f3f3f3;
+      // border-radius: 2.5rem;
+      margin: 0.3rem;
+      text-align: center;
+      padding: 0rem 0rem;
+      h3 {
+        font-family: "bebas";
+      }
+
+      h4 {
+        color: #08595e;
+        font-size: 1rem;
+        font-weight: 600;
+
+        position: fixed;
+        bottom: 0;
+      }
+    }
+
+    .product-image {
+      width: 15rem;
+
+      // box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+      border-radius: 5px;
+      margin-top: 2vh;
+    }
+  }
+
+  .showcase {
+    color: rgb(2, 34, 12);
+    background-color: none;
+    text-align: center;
+    padding: 20px 30px;
+    text-align: justify;
+  }
+
+  .top-header {
+    img {
+      height: 35rem;
+    }
+  }
+
+  .title {
+    font-size: 4vw;
+    text-transform: uppercase;
+    font-family: "bebas";
+    white-space: initial;
+  }
+
+  .sub-title {
+    font-size: 1.5vw;
+    text-transform: lowercase;
+    font-family: "bebas";
+    padding-top: 1rem;
+  }
+
+  .explorer {
+    font-size: 4vw;
+    font-family: "bebas";
+    white-space: normal;
   }
 }

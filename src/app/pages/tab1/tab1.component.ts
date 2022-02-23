@@ -267,37 +267,38 @@ export class Tab1Component implements OnInit {
   toCustom() {
     this.router.navigate(['nav/custom']);
   }
-  AboutUs() {
-    const dialogRef = this.dialog.open(InformationComponent, {
-      id: 'aboutus',
-      width: '50%',
-    });
+  // AboutUs() {
+  //   const dialogRef = this.dialog.open(InformationComponent, {
+  //     id: 'aboutus',
+  //     width: '50%',
+  //   });
 
-    dialogRef.afterClosed().subscribe((result) => {
-      // console.log(result);
-      if (result == true) {
-        console.log('Okay');
-      } else {
-        console.log('Cancel');
-      }
-    });
-  }
-  ContactUs() {
-    const dialogRef = this.dialog.open(InformationComponent, {
-      id: 'contactus',
-      width: '70%',
-      height: '70%',
-    });
+  //   dialogRef.afterClosed().subscribe((result) => {
+  //     // console.log(result);
+  //     if (result == true) {
+  //       console.log('Okay');
+  //     } else {
+  //       console.log('Cancel');
+  //     }
+  //   });
+  // }
 
-    dialogRef.afterClosed().subscribe((result) => {
-      // console.log(result);
-      if (result == true) {
-        console.log('Okay');
-      } else {
-        console.log('Cancel');
-      }
-    });
-  }
+  // ContactUs() {
+  //   const dialogRef = this.dialog.open(InformationComponent, {
+  //     id: 'contactus',
+  //     width: '70%',
+  //     height: '70%',
+  //   });
+
+  //   dialogRef.afterClosed().subscribe((result) => {
+  //     // console.log(result);
+  //     if (result == true) {
+  //       console.log('Okay');
+  //     } else {
+  //       console.log('Cancel');
+  //     }
+  //   });
+  // }
   Policies() {
     this.snackbar('No policies yet so you can do what you want.');
   }

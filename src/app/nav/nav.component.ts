@@ -132,7 +132,8 @@ export class NavComponent implements OnInit {
   AboutUs() {
     const dialogRef = this.dialog.open(InformationComponent, {
       id: 'aboutus',
-      width: '50%',
+      width: '75%',
+      backdropClass: 'responsive-dialog',
     });
 
     dialogRef.afterClosed().subscribe((result) => {
@@ -186,7 +187,7 @@ export class NavComponent implements OnInit {
   }
 
   m_cart() {
-    this.sidenav.toggle()
+    this.sidenav.toggle();
     this.getOrders();
   }
 
@@ -312,6 +313,23 @@ export class NavComponent implements OnInit {
   snackbar(message: string) {
     this._snackBar.open(message, '', {
       duration: 1000,
+    });
+  }
+
+  ContactUs() {
+    const dialogRef = this.dialog.open(InformationComponent, {
+      id: 'contactus',
+      width: '70%',
+      height: '70%',
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      // console.log(result);
+      if (result == true) {
+        console.log('Okay');
+      } else {
+        console.log('Cancel');
+      }
     });
   }
 }
