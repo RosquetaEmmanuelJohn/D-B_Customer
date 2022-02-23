@@ -15,11 +15,11 @@
       </div>
 </div>
 <div id="center container mt-0">
-    <div class="card mx-auto" id="main_card">
+    <div class="mx-auto" id="main_card">
         <div class="card-body" id="body_card" style="text-align: center;display: block;">
             
             <div class="d-flex">
-                <div class="col">
+                <div class="col" id="col-hide">
                     <button (click)="history()" id="side-btn" value=""><mat-icon style="transform: scale(4);">keyboard_arrow_left</mat-icon></button>
                 </div>
     
@@ -39,7 +39,7 @@
                     </mat-card>
                 </div>
                 
-                <div class="col">
+                <div class="col" id="col-hide">
                     <button (click)="gen()" id="side-btnn" value=""><mat-icon style="vertical-align: middle;transform: scale(2);">local_florist</mat-icon></button>
                 </div>
             </div>

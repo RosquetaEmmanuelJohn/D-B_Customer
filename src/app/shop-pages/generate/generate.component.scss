@@ -16,6 +16,7 @@
     background: none;
     width: 330px;
     color: rgb(0, 0, 0);
+    // text-align: center;
     // justify-content: center;
 }
 
@@ -164,24 +165,41 @@
     #side-btn-mob {
         visibility: visible;
     }
-}
-
-@media screen and (max-width: 700px) { 
-    #bouquet_card {
-        background: none;
-        width: 330px;
-        color: rgb(0, 0, 0);
-        margin-left: -80px;
-        // justify-content: center;
+    #main_card {
+        width: 100%;
+    } 
+    #col-hide{
+        display: none;
+    }
+    .col {
+        display: flex;
+        justify-content: center;
     }
 }
 
 @media screen and (max-width: 400px) { 
+    .col {
+        display: block;
+        margin-left: -25px;
+        // margin-right: auto;  
+        // background-color: red;
+    }
     #bouquet_card {
         background: none;
         width: 330px;
         color: rgb(0, 0, 0);
-        margin-left: -110px;
+        // text-align: center;
         // justify-content: center;
     }
+    
 }
+
+// @media screen and (max-width: 400px) { 
+//     #bouquet_card {
+//         background: none;
+//         width: 330px;
+//         color: rgb(0, 0, 0);
+//         margin-left: -110px;
+//         // justify-content: center;
+//     }
+// }
