@@ -372,9 +372,22 @@
 </div>
 
 <div id="page-overlay" *ngIf="showSpinner">
-  <img
-    class="rotate"
-    id="spinner"
-    src="../../../assets/icon/benef_logo.png"
-  /><b id="wait">Please wait...</b>
+  <div class="content">
+    <div
+      class="center-image"
+      style="
+        display: flex;
+
+        justify-content: center;
+      "
+    >
+      <img
+        class="rotate"
+        id="spinner"
+        src="../../../assets/icon/benef_logo.png"
+      />
+    </div>
+
+    <b id="wait" style="text-align: center">Please wait...</b>
+  </div>
 </div>
