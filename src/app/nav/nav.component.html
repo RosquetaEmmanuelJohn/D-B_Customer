@@ -271,7 +271,13 @@
             <a href="javascript:void(0)" class="closebtn" (click)="closeCart()"
               >&times;</a
             >
-            <h1 class="mt-2 ml-3 justify-content-start">CART</h1>
+            <!-- <h1 class="mt-2 ml-3 justify-content-start">CART</h1>-->
+            <div class="showcase">
+              <h3 class="mt-5" id="line-style" style="text-align: center">
+                <span class="explorer">CART</span>
+              </h3>
+            </div> 
+
             <div class="Cartoverlay-content">
               <div
                 *ngIf="!cart_obj"
@@ -329,7 +335,7 @@
                                   />
                                 </div>
                                 <div class="text d-block">
-                                  <p class="mb-0">{{ order.order_flower }}</p>
+                                  <p class="mb-0" style="font-family: 'bebas'">{{ order.order_flower }}</p>
                                   <p class="mb-0" class="text-details">
                                     {{ order.main_flower }}
                                   </p>
@@ -369,7 +375,7 @@
                                   />
                                 </div>
                                 <div class="text d-block">
-                                  <p class="mb-0">{{ order.order_flower }}</p>
+                                  <p class="mb-0" style="font-family: 'bebas'">{{ order.order_flower }}</p>
                                   <p class="mb-0" class="text-details">
                                     Soon to have details
                                   </p>
@@ -383,7 +389,7 @@
                                 id="details"
                                 class="justify-content-end mb-0 mt-0"
                               >
-                                ₱{{ order.order_totalprice | number: "1.2-2" }}
+                                ₱<b>{{ order.order_totalprice | number: "1.2-2" }}</b>
                               </h1>
                             </div>
                           </td>

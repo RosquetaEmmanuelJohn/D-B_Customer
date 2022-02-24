@@ -220,8 +220,8 @@ export class NavComponent implements OnInit {
     if (order) {
       // console.log(i, order);
       const dialogRef = this.dialog.open(ConfirmcartComponent, {
-        // width: '55%',
-        height: '100vh',
+        // width: '100%',
+        // height: '100vh',
         data: { order, i },
         id: 'confirmcart',
       });
