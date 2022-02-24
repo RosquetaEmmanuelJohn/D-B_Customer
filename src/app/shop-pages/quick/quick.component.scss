@@ -126,6 +126,7 @@ button {
   text-align: center;
   padding: 20px 30px;
   text-align: justify;
+  margin-top: 5vw;
 }
 .explorer {
   font-size: 5vw;
@@ -165,9 +166,15 @@ button {
   width: 50rem;
 }
 
-@media screen and (max-width: 1023px) { 
+@media screen and (max-width: 1023px) {
   #input-range {
     width: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .explorer {
+    font-size: 10vw;
   }
 }
 

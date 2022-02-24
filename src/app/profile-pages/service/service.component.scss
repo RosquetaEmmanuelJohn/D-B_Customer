@@ -11,6 +11,15 @@
   box-shadow: 2px 2px 5px grey;
   background: none;
   display: flex;
+  font-family: "bebas";
+
+  .row {
+    .col {
+      p {
+        font-size: 1.5vw;
+      }
+    }
+  }
 }
 
 .col {
@@ -46,7 +55,7 @@
   }
 }
 
-@media screen and (max-width: 565px) {
+@media screen and (max-width: 600px) {
   .list-group-item {
     display: block;
     width: 100% !important;
@@ -64,6 +73,16 @@
   .header-top {
     .explorer {
       font-size: 10vw;
+    }
+  }
+
+  .list-group-item {
+    .row {
+      .col {
+        p {
+          font-size: 7vw;
+        }
+      }
     }
   }
 }
