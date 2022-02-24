@@ -276,7 +276,7 @@
               <h3 class="mt-5" id="line-style" style="text-align: center">
                 <span class="explorer">CART</span>
               </h3>
-            </div> 
+            </div>
 
             <div class="Cartoverlay-content">
               <div
@@ -335,7 +335,9 @@
                                   />
                                 </div>
                                 <div class="text d-block">
-                                  <p class="mb-0" style="font-family: 'bebas'">{{ order.order_flower }}</p>
+                                  <p class="mb-0" style="font-family: 'bebas'">
+                                    {{ order.order_flower }}
+                                  </p>
                                   <p class="mb-0" class="text-details">
                                     {{ order.main_flower }}
                                   </p>
@@ -375,7 +377,9 @@
                                   />
                                 </div>
                                 <div class="text d-block">
-                                  <p class="mb-0" style="font-family: 'bebas'">{{ order.order_flower }}</p>
+                                  <p class="mb-0" style="font-family: 'bebas'">
+                                    {{ order.order_flower }}
+                                  </p>
                                   <p class="mb-0" class="text-details">
                                     Soon to have details
                                   </p>
@@ -389,7 +393,9 @@
                                 id="details"
                                 class="justify-content-end mb-0 mt-0"
                               >
-                                ₱<b>{{ order.order_totalprice | number: "1.2-2" }}</b>
+                                ₱<b>{{
+                                  order.order_totalprice | number: "1.2-2"
+                                }}</b>
                               </h1>
                             </div>
                           </td>
@@ -414,9 +420,11 @@
                 ><h4 class="col_title">Contact Us</h4>
                 <mat-divider></mat-divider>
                 <mat-list-item
-                  ><a title="Email">sample@gmail.com</a></mat-list-item
+                  ><mat-icon>email</mat-icon
+                  ><a title="Email">bloompod2k21@gmail.com</a></mat-list-item
                 >
                 <mat-list-item
+                  ><mat-icon>support_agent</mat-icon
                   ><a title="Contact Number">09XX-XXX-XXXX</a></mat-list-item
                 >
               </mat-list>
@@ -426,6 +434,7 @@
                 ><h4 class="col_title">Information</h4>
                 <mat-divider></mat-divider>
                 <mat-list-item
+                  ><mat-icon>help_outline</mat-icon
                   ><a (click)="AboutUs()" title="About Us"
                     >About Us</a
                   ></mat-list-item
@@ -450,7 +459,7 @@
                     font-weight: 500;
                     text-align: center;
                   "
-                  >Detials and Blooms Events and Flowers provides assistance to
+                  >Detials & Blooms Events and Flowers provides assistance to
                   event needs and cater to flower arrangements and styling
                   requirements for all occasions.</a
                 >
