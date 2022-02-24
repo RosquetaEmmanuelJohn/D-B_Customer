@@ -51,121 +51,156 @@
         <img src="../../../assets/empty.svg" alt="emp" />
         <h3><strong>No Order that needs to be paid yet. Order Now!</strong></h3>
         <br />
-        <!-- <div class="card" style="background: none" matRipple>
-          <div class="card-body" style="cursor: pointer">
-            <h4>
-              “Flowers don't worry about how they're going to bloom. <br />They
-              just open up and turn toward the light and that makes them
-              beautiful.” <br />Jim Carrey
-            </h4>
-          </div>
-        </div> -->
       </div>
-      <div class="row">
-        <div
-          class="col-sm mt-3 d-flex justify-content-between"
-          *ngFor="let order of orders; let i = index"
-        >
+
+      <ul class="list-group">
+        <div class="row">
           <div
-            class="card"
-            style="width: 18rem; margin: auto; background: #e3f0ff"
+            class="col-sm"
+            style="display: block"
+            *ngFor="let order of orders; let i = index"
           >
-            <img
-              *ngIf="order.order_flower == 'Generated Flower Bouquet'"
-              class="card-img-top p-1 mb-0"
-              src="../../../assets/icon/benef_log.jpg"
-              height="283"
-              alt="Card image cap"
-            />
-            <img
-              *ngIf="order.order_flower != 'Generated Flower Bouquet'"
-              class="card-img-top p-1 mb-0"
-              src="http://bloompod.api.gc-ecommerceapp.com/bloompod_api/quick/{{
-                order.order_flower
-              }}.jpg"
-              alt="Card image cap"
-            />
-            <div class="card-body mt-0">
-              <p class="card-text mt-0">
-                {{ order.order_payment }}
-                <span style="float: right"
-                  >{{ order.order_time }} {{ order.order_date | date }}</span
-                ><br />
-                <span>Recipient: {{ order.order_recipient }}</span
-                ><br />
-                <span style="font-size: 160%"
-                  >₱{{ order.order_totalprice | number: "1.2-2" }}</span
-                >
-                <button
-                  matTooltip="Cancel the product"
-                  matTooltipPosition="above"
-                  (click)="remove(order.order_id, i)"
-                  id="quick_btn1"
-                >
-                  <mat-icon style="font-size: 150%"
-                    >remove_shopping_cart</mat-icon
-                  >
-                </button>
-              </p>
-              <form>
-                <div class="form-group">
-                  <h4 class="mb-0 mx-auto text-center">Upload Payment Image</h4>
-                  <input
-                    #fileUpload
-                    style="display: none"
-                    class="form-control-file"
-                    accept=".png,.jpeg,.jpg"
-                    (change)="onFileChange($event, i)"
-                    name="report"
-                    type="file"
-                  />
-
-                  <div
-                    style="
-                      width: 80%;
-                      height: 100%;
-                      border-radius: 10px;
-                      border: 1px solid rgb(209, 209, 209);
+            <div class="card" style="margin: auto">
+              <img
+                *ngIf="order.order_flower == 'Generated Flower Bouquet'"
+                class="card-img-top p-1 mb-0"
+                src="../../../assets/icon/benef_log.jpg"
+                alt="Card image cap"
+              />
+              <img
+                *ngIf="order.order_flower != 'Generated Flower Bouquet'"
+                class="card-img-top p-1 mb-0"
+                src="http://bloompod.api.gc-ecommerceapp.com/bloompod_api/quick/{{
+                  order.order_flower
+                }}.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body mt-0">
+                <p class="card-text mt-0">
+                  <!-- <span id="detail"> {{ order.order_payment }}</span
+                  ><br />
+                  <span id="detail"
+                    >{{ order.order_time }} {{ order.order_date | date }}</span
+                  ><br />
+                  <span
+                    id="detail"
+                    *ngIf="
+                      order.order_recipient != '' &&
+                      order.order_recipient != null
                     "
-                    class="mx-auto"
-                  >
-                    <div class="file-upload mx-auto text-center mt-1">
-                      <span *ngIf="i == index; else none">
-                        <img id="output" [src]="image_src" width="100" /><br />
-                        {{ fileName }}
-                      </span>
-                      <ng-template #none> No file chosen yet. </ng-template>
+                    >Recipients: {{ order.order_recipient }}</span
+                  ><br />
+                  <span style="font-size: 160%"
+                    >₱{{ order.order_totalprice | number: "1.2-2" }}</span
+                  > -->
 
+                  <button
+                    matTooltip="Cancel the product"
+                    matTooltipPosition="above"
+                    (click)="remove(order.order_id, i)"
+                    id="quick_btn1"
+                  >
+                    <mat-icon style="font-size: 150%"
+                      >remove_shopping_cart</mat-icon
+                    >
+                  </button>
+                </p>
+                <div class="row">
+                  <div class="col">
+                    <p>Mode:</p>
+                    <p id="Infos">
+                      {{ order.order_payment }}
+                    </p>
+                  </div>
+
+                  <div class="col">
+                    <p>Status:</p>
+                    <p id="Infos">{{ order.order_status }}</p>
+                  </div>
+                </div>
+
+                <div class="row mt-3">
+                  <div class="col">
+                    <p>Date and Time:</p>
+                    <p id="Infos">
+                      {{ order.order_date | date }} at {{ order.order_time }}
+                    </p>
+                  </div>
+
+                  <div class="col">
+                    <p>For:</p>
+                    <p id="Infos" *ngIf="order.order_recipient">
+                      {{ order.order_recipient }}
+                    </p>
+                    <p id="Infos" *ngIf="!order.order_recipient">Myself</p>
+                  </div>
+                </div>
+                <form>
+                  <div class="form-group">
+                    <h4 class="mb-0 mx-auto text-center">
+                      Upload Payment Image
+                    </h4>
+                    <input
+                      #fileUpload
+                      style="display: none"
+                      class="form-control-file"
+                      accept=".png,.jpeg,.jpg"
+                      (change)="onFileChange($event, i)"
+                      name="report"
+                      type="file"
+                    />
+
+                    <div
+                      style="
+                        width: 80%;
+                        height: 100%;
+                        border-radius: 10px;
+                        border: 1px solid rgb(209, 209, 209);
+                      "
+                      class="mx-auto"
+                    >
+                      <div class="file-upload mx-auto text-center mt-1">
+                        <span *ngIf="i == index; else none">
+                          <img
+                            id="output"
+                            [src]="image_src"
+                            width="100"
+                          /><br />
+                          {{ fileName }}
+                        </span>
+                        <ng-template #none> No file chosen yet. </ng-template>
+
+                        <button
+                          mat-button
+                          color="primary"
+                          type="button"
+                          class="upload-btn"
+                          (click)="fileUpload.click()"
+                        >
+                          Browse
+                        </button>
+                      </div>
+                    </div>
+
+                    <div style="text-align: center" class="mt-2">
                       <button
-                        mat-button
-                        color="primary"
+                        style="width: 80%"
+                        mat-flat-button
+                        color="accent"
+                        [disabled]="i != index"
                         type="button"
-                        class="upload-btn"
-                        (click)="fileUpload.click()"
+                        (click)="upload(order.order_id, i)"
                       >
-                        Browse
+                        Upload Payment
                       </button>
                     </div>
                   </div>
-
-                  <div style="text-align: center" class="mt-2">
-                    <button
-                      style="width: 80%"
-                      mat-flat-button
-                      color="accent"
-                      [disabled]="i != index"
-                      type="button"
-                      (click)="upload(order.order_id, i)"
-                    >
-                      Upload Payment
-                    </button>
-                  </div>
-                </div>
-              </form>
+                </form>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </ul>
     </div>
   </div>
 </div>

@@ -6,7 +6,11 @@ import { DataService } from 'src/app/services/data.service';
 import { UserService } from 'src/app/services/user.service';
 import { convertToObject, couldStartTrivia } from 'typescript';
 import { Order } from '../../models/order';
-import {MatDialog,MatDialogRef,MAT_DIALOG_DATA,} from '@angular/material/dialog';
+import {
+  MatDialog,
+  MatDialogRef,
+  MAT_DIALOG_DATA,
+} from '@angular/material/dialog';
 import { LogoutComponent } from 'src/app/dialog/logout/logout.component';
 
 @Component({
@@ -21,9 +25,9 @@ export class ToPayComponent implements OnInit {
   userId: any;
 
   orders: any;
-  res:any;
+  res: any;
   orderPayload: Order;
-  fileName: string ='';
+  fileName: string = '';
   index: any;
 
   sendfile: FormGroup;
@@ -35,7 +39,7 @@ export class ToPayComponent implements OnInit {
     public router: Router,
     private fb: FormBuilder,
     private _snackBar: MatSnackBar,
-    public dialog: MatDialog,
+    public dialog: MatDialog
   ) {
     this.orderPayload = new Order();
   }
@@ -56,7 +60,7 @@ export class ToPayComponent implements OnInit {
   }
 
   gettoPay(id: any) {
-    // this.orders = [];  
+    // this.orders = [];
     let user_id = id;
     // console.log(user_id);
     this.dataService
@@ -66,9 +70,8 @@ export class ToPayComponent implements OnInit {
         try {
           this.orders = load.payload.orders.reverse();
           this.orders = this.toPay('toPay');
-          // console.log(this.orders);
-        }
-        catch(err) {
+          console.log(this.orders);
+        } catch (err) {
           this.orders = null;
         }
       });
@@ -85,11 +88,11 @@ export class ToPayComponent implements OnInit {
     let action = 'remove';
     let order_id = id;
     const dialogRef = this.dialog.open(LogoutComponent, {
-      id: 'removefromtopay'
+      id: 'removefromtopay',
     });
     // console.log(this.index, i);
 
-    dialogRef.afterClosed().subscribe(result => {
+    dialogRef.afterClosed().subscribe((result) => {
       // console.log(result);
       if (result == true) {
         // console.log(result);
@@ -102,15 +105,14 @@ export class ToPayComponent implements OnInit {
             this.index = null;
             this.orders.splice(i, 1);
             // this.gettoPay(this.userId);
-      });
-      }
-      else {
-        console.log("dialog closed");
+          });
+      } else {
+        console.log('dialog closed');
       }
     });
   }
 
-  onFileChange(event: any, i:any) {
+  onFileChange(event: any, i: any) {
     this.fileName = event.target.files[0].name;
     this.index = i;
     if (event.target.files.length > 0) {
@@ -118,13 +120,13 @@ export class ToPayComponent implements OnInit {
       this.sendfile.patchValue({
         payment: reportfile,
       });
-    // var image = document.getElementById('output');
-    var reader = new FileReader();
-    reader.readAsDataURL(event.target.files[0]);
-    reader.onload = (_event) => {
-			this.image_src = reader.result; 
-		}
-    } 
+      // var image = document.getElementById('output');
+      var reader = new FileReader();
+      reader.readAsDataURL(event.target.files[0]);
+      reader.onload = (_event) => {
+        this.image_src = reader.result;
+      };
+    }
   }
 
   async upload(order_id: any, i: any) {
@@ -135,7 +137,7 @@ export class ToPayComponent implements OnInit {
     });
     // console.log(order_id, i);
 
-    dialogRef.afterClosed().subscribe(result => {
+    dialogRef.afterClosed().subscribe((result) => {
       // console.log(result);
       if (result == true) {
         var formData = new FormData();
@@ -148,13 +150,12 @@ export class ToPayComponent implements OnInit {
               const checking = this.dialog.open(LogoutComponent, {
                 id: 'check_info',
               });
-              dialogRef.afterClosed().subscribe(result => {
+              dialogRef.afterClosed().subscribe((result) => {
                 if (result == true) {
                   console.log('dialog confirmed');
                   this.router.navigate(['nav/service']);
-                }
-                else {
-                  console.log("dialog closed");
+                } else {
+                  console.log('dialog closed');
                 }
               });
               this.fileName = '';
@@ -167,9 +168,8 @@ export class ToPayComponent implements OnInit {
         } else {
           this.snackbar('You have to attach a proof of payment to submit');
         }
-      }
-      else {
-        console.log("dialog closed");
+      } else {
+        console.log('dialog closed');
       }
     });
   }
