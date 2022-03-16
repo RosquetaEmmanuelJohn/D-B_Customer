@@ -13,7 +13,7 @@
   text-align: center;
   height: 60vh;
   width: 100%;
-  background: linear-gradient(to top, #c39cddcc, #e3f0ff),
+  background: linear-gradient(to top, rgba(0, 196, 204, 0.8), #e3f0ff),
     url(../../../assets/icon/header1.jpg) no-repeat top center;
   border-top: none;
 
@@ -134,7 +134,8 @@ h3 {
   img {
     padding: 10px;
     color: "white";
-    background-color: #dee2f6;
+    border-radius: 50px;
+    background-color: #48d444;
   }
 }
 .card-thumb img {
@@ -152,20 +153,16 @@ h3 {
   padding-top: 10%;
 }
 .card:hover {
-  box-shadow: rgb(195, 157, 204, 0.25) 0px 54px 55px,
-    rgba(195, 157, 204, 0.12) 0px -12px 30px,
-    rgba(195, 157, 204, 0.12) 0px 4px 6px,
-    rgba(195, 157, 204, 0.17) 0px 12px 13px,
-    rgba(195, 157, 204, 0.09) 0px -3px 5px;
+  box-shadow: rgba(0, 196, 204, 0.25) 0px 54px 55px,
+    rgba(0, 196, 204, 0.12) 0px -12px 30px, rgba(0, 196, 204, 0.12) 0px 4px 6px,
+    rgba(0, 196, 204, 0.17) 0px 12px 13px, rgba(0, 196, 204, 0.09) 0px -3px 5px;
   transition: box-shadow 0.3s ease-in-out;
 }
 
 .product-item:hover {
-  box-shadow: rgb(195, 157, 204, 0.25) 0px 54px 55px,
-    rgba(195, 157, 204, 0.12) 0px -12px 30px,
-    rgba(195, 157, 204, 0.12) 0px 4px 6px,
-    rgba(195, 157, 204, 0.17) 0px 12px 13px,
-    rgba(195, 157, 204, 0.09) 0px -3px 5px;
+  box-shadow: rgb(0, 196, 204, 0.25) 0px 54px 55px,
+    rgba(0, 196, 204, 0.12) 0px -12px 30px, rgba(0, 196, 204, 0.12) 0px 4px 6px,
+    rgba(0, 196, 204, 0.17) 0px 12px 13px, rgba(0, 196, 204, 0.09) 0px -3px 5px;
   transition: box-shadow 0.3s ease-in-out;
 }
 
@@ -231,7 +228,7 @@ h3 {
     }
 
     .course-preview {
-      background-color: #2a265f;
+      background-color: #48d444;
       color: #fff;
       padding: 30px;
       // max-width: 400px;
@@ -250,6 +247,9 @@ h3 {
       padding: 30px;
       position: relative;
       width: 100%;
+      h2 {
+        color: #48d444;
+      }
     }
   }
 }
