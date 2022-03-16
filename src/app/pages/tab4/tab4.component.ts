@@ -24,6 +24,8 @@ export class Tab4Component implements OnInit {
   passwordType: string = 'password';
   passwordIcon: string = 'visibility_off';
 
+  termschecked:boolean = false;
+
   showSpinner: boolean = false;
   checkBox: boolean = false;
 
@@ -48,6 +50,10 @@ export class Tab4Component implements OnInit {
   onChange() {
     // console.log(this.checkBox);
     this.passwordType = this.passwordType === 'text' ? 'password' : 'text';
+  }
+
+  termscheck() {
+
   }
 
   openDialog() {
@@ -206,7 +212,7 @@ export class Tab4Component implements OnInit {
 
     const dialogRef = this.dialog.open(InformationComponent, {
       id: 'termsandcons',
-      width: '50%',
+      width: '100%',
     });
 
     dialogRef.afterClosed().subscribe((result) => {
