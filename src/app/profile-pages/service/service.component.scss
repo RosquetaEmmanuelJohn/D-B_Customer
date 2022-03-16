@@ -22,6 +22,43 @@
   }
 }
 
+#main_card {
+  background: none;
+  width: 75%;
+  margin-top: 1%;
+  .card-body {
+    padding: 0;
+    padding-top: 1.5rem;
+    img {
+      margin: auto;
+      width: 15vw;
+      opacity: 50%;
+      margin-bottom: 2rem;
+      margin-top: 2rem;
+    }
+    strong {
+      font-family: "bebas";
+      font-size: 2rem;
+      opacity: 50%;
+    }
+    .list-group {
+      font-family: "bebas";
+
+      .row {
+        .col {
+          p {
+            font-size: 1vw;
+          }
+        }
+      }
+
+      form {
+        margin-top: 2rem;
+      }
+    }
+  }
+}
+
 .col {
   min-width: 50%;
   max-width: 50%;
@@ -81,6 +118,38 @@
       .col {
         p {
           font-size: 7vw;
+        }
+      }
+    }
+  }
+
+  #main_card {
+    .card-body {
+      img {
+        margin: auto;
+        width: 5rem;
+        opacity: 50%;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+      }
+      strong {
+        font-family: "bebas";
+        font-size: 2rem;
+        opacity: 50%;
+      }
+      .list-group {
+        font-family: "bebas";
+
+        .row {
+          .col {
+            p {
+              font-size: 1rem;
+            }
+          }
+        }
+
+        form {
+          margin-top: 2rem;
         }
       }
     }

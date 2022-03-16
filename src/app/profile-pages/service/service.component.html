@@ -1,4 +1,8 @@
-<div class="mx-auto" style="width: 75%; margin-top: 1%; background: none">
+<div
+  class="mx-auto"
+  id="main_card"
+  style="width: 75%; margin-top: 1%; background: none"
+>
   <div class="card-body">
     <div class="card-title text-center header-top">
       <mat-icon>compare_arrows</mat-icon>
@@ -11,17 +15,11 @@
     </div>
 
     <div *ngIf="!orders" style="text-align: center">
-      <h3><strong>There are no processing orders yet.</strong></h3>
+      <img src="../../../assets/empty.svg" alt="emp" />
+      <h3>
+        <strong>There are no orders being processed yet.. Order More!</strong>
+      </h3>
       <br />
-      <div class="card" style="background: none" matRipple>
-        <div class="card-body" style="cursor: pointer">
-          <h4>
-            “Flowers don't worry about how they're going to bloom. <br />They
-            just open up and turn toward the light and that makes them
-            beautiful.” <br />Jim Carrey
-          </h4>
-        </div>
-      </div>
     </div>
 
     <ul class="list-group">

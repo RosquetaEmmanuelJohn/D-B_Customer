@@ -7,14 +7,18 @@
   background-color: white;
   border-radius: 100%;
 }
-
+.top-header {
+  button {
+    font-family: "bebas";
+  }
+}
 .top-header {
   position: relative;
   text-align: center;
   height: 60vh;
   width: 100%;
   background: linear-gradient(to top, rgba(0, 196, 204, 0.8), #e3f0ff),
-  url(../../../assets/icon/header1.jpg) no-repeat top center;
+    url(../../../assets/icon/header1.jpg) no-repeat top center;
   border-top: none;
 
   .top-image {
@@ -72,6 +76,7 @@ h3 {
 
   margin: 3rem 10px 2rem 10px;
   margin-top: 10rem;
+  color: #08595e;
 }
 
 #line-style span {
@@ -134,7 +139,8 @@ h3 {
   img {
     padding: 10px;
     color: "white";
-    background-color: #dee2f6;
+    border-radius: 50px;
+    background-color: #48d444;
   }
 }
 .card-thumb img {
@@ -152,20 +158,16 @@ h3 {
   padding-top: 10%;
 }
 .card:hover {
-  box-shadow: rgb(195, 157, 204, 0.25) 0px 54px 55px,
-    rgba(195, 157, 204, 0.12) 0px -12px 30px,
-    rgba(195, 157, 204, 0.12) 0px 4px 6px,
-    rgba(195, 157, 204, 0.17) 0px 12px 13px,
-    rgba(195, 157, 204, 0.09) 0px -3px 5px;
+  box-shadow: rgba(8, 89, 94, 0.25) 0px 54px 55px,
+    rgba(8, 89, 94, 0.12) 0px -12px 30px, rgba(8, 89, 94, 0.12) 0px 4px 6px,
+    rgba(8, 89, 94, 0.17) 0px 12px 13px, rgba(8, 89, 94, 0.09) 0px -3px 5px;
   transition: box-shadow 0.3s ease-in-out;
 }
 
 .product-item:hover {
-  box-shadow: rgb(195, 157, 204, 0.25) 0px 54px 55px,
-    rgba(195, 157, 204, 0.12) 0px -12px 30px,
-    rgba(195, 157, 204, 0.12) 0px 4px 6px,
-    rgba(195, 157, 204, 0.17) 0px 12px 13px,
-    rgba(195, 157, 204, 0.09) 0px -3px 5px;
+  box-shadow: rgb(8, 89, 94, 0.25) 0px 54px 55px,
+    rgba(8, 89, 94, 0.12) 0px -12px 30px, rgba(8, 89, 94, 0.12) 0px 4px 6px,
+    rgba(8, 89, 94, 0.17) 0px 12px 13px, rgba(8, 89, 94, 0.09) 0px -3px 5px;
   transition: box-shadow 0.3s ease-in-out;
 }
 
@@ -199,11 +201,9 @@ h3 {
     .courses-container {
     }
     .course:hover {
-      box-shadow: rgb(195, 157, 204, 0.25) 0px 54px 55px,
-        rgba(195, 157, 204, 0.12) 0px -12px 30px,
-        rgba(195, 157, 204, 0.12) 0px 4px 6px,
-        rgba(195, 157, 204, 0.17) 0px 12px 13px,
-        rgba(195, 157, 204, 0.09) 0px -3px 5px;
+      box-shadow: rgb(8, 89, 94, 0.25) 0px 54px 55px,
+        rgba(8, 89, 94, 0.12) 0px -12px 30px, rgba(8, 89, 94, 0.12) 0px 4px 6px,
+        rgba(8, 89, 94, 0.17) 0px 12px 13px, rgba(8, 89, 94, 0.09) 0px -3px 5px;
       transition: box-shadow 0.3s ease-in-out;
     }
 
@@ -231,7 +231,7 @@ h3 {
     }
 
     .course-preview {
-      background-color: #2a265f;
+      background-color: #08595e;
       color: #fff;
       padding: 30px;
       // max-width: 400px;
@@ -245,11 +245,17 @@ h3 {
       margin-top: 30px;
       text-decoration: none;
     }
+    .course-preview h2 {
+      font-family: "bebas";
+    }
 
     .course-info {
       padding: 30px;
       position: relative;
       width: 100%;
+      h2 {
+        color: #08595e;
+      }
     }
   }
 }
@@ -330,6 +336,7 @@ h3 {
   }
   #line-style {
     width: 100%;
+    color: #08595e;
     text-align: center;
   }
 
@@ -342,6 +349,7 @@ h3 {
     font-size: 7vw;
     font-family: "bebas";
     white-space: normal;
+    color: #08595e;
   }
 }
 
@@ -399,6 +407,9 @@ h3 {
     img {
       height: 35rem;
     }
+    button {
+      font-family: "bebas";
+    }
   }
 
   .title {
@@ -419,5 +430,6 @@ h3 {
     font-size: 4vw;
     font-family: "bebas";
     white-space: normal;
+    color: #08595e;
   }
 }
