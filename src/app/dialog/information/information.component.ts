@@ -8,6 +8,7 @@ import {MatDialog} from '@angular/material/dialog';
 })
 export class InformationComponent implements OnInit {
   id_from: any;
+  logout:any = 'logout';
   aboutus:any = 'aboutus';
   contactus:any = 'contactus';
   termsandcons:any = 'termsandcons';
