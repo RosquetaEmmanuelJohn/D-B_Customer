@@ -186,6 +186,18 @@
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .header-top {
+    .explorer {
+      font-size: 5vw;
+      background-color: none;
+
+      text-transform: uppercase;
+      font-family: "bebas";
+    }
+  }
+}
+
 //mobile browsing
 @media screen and (max-width: 600px) {
   .header-top {
