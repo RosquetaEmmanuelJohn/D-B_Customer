@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { UserService } from './user.service';
-import { DefaultImage } from "../data-schema";
+import { DefaultImage } from '../data-schema';
 
 import * as CryptoJS from 'crypto-js';
 import * as aes from 'crypto-js/aes';
@@ -12,9 +12,9 @@ import * as padZeroPadding from 'crypto-js/pad-zeropadding';
   providedIn: 'root',
 })
 export class DataService {
-  private url = 'http://bloompod.api.gc-ecommerceapp.com/bloompod_api/';
+  private url = 'https://detailsblooms.gc-ecommerceapp.com/api/bloompod_api/';
 
-  version_number = '1.1.0'; 
+  version_number = '1.1.0';
 
   private keyString = new DefaultImage();
   constructor(private http: HttpClient, private _user: UserService) {
@@ -26,27 +26,40 @@ export class DataService {
   set_user_status() {
     let user_status = sessionStorage.getItem('token');
     // console.log(user_status);
-    if(!user_status) {
+    if (!user_status) {
       sessionStorage.setItem('token', 'guest');
-    }
-    else if (user_status == 'guest'){
-      console.log("Still a Guest");
-    }
-    else {
-      console.log("Logged In");
+    } else if (user_status == 'guest') {
+      console.log('Still a Guest');
+    } else {
+      console.log('Logged In');
     }
   }
 
   processData(api: any, load: any, sw: any) {
-    let payload  = { load: load, token: this._user.getToken(), userid: this._user.getUserID() }
-    switch(sw) {
-      case 1: 
-        return this.http.post(this.url+api, this.convertmessage(unescape(encodeURIComponent(JSON.stringify(payload)))));
+    let payload = {
+      load: load,
+      token: this._user.getToken(),
+      userid: this._user.getUserID(),
+    };
+    switch (sw) {
+      case 1:
+        return this.http.post(
+          this.url + api,
+          this.convertmessage(
+            unescape(encodeURIComponent(JSON.stringify(payload)))
+          )
+        );
       case 2:
-        return this.http.post(this.url+api, this.convertmessage(unescape(encodeURIComponent(JSON.stringify(load)))));
+        return this.http.post(
+          this.url + api,
+          this.convertmessage(
+            unescape(encodeURIComponent(JSON.stringify(load)))
+          )
+        );
       case 3:
-        return this.http.post(this.url+api, load);
-      default: return null;
+        return this.http.post(this.url + api, load);
+      default:
+        return null;
     }
   }
 
@@ -85,9 +98,14 @@ export class DataService {
     let keyString = this._user.genHexString(32);
     let ivString = this._user.genHexString(32);
     let key = encHex.parse(keyString);
-    let iv =  encHex.parse(ivString);
-    
-    return this.keyString.generateSalt()+iv+key+aes.encrypt(msg, key, {iv:iv, padding:padZeroPadding}).toString();
+    let iv = encHex.parse(ivString);
+
+    return (
+      this.keyString.generateSalt() +
+      iv +
+      key +
+      aes.encrypt(msg, key, { iv: iv, padding: padZeroPadding }).toString()
+    );
   }
 
   async request(endpoint: any, data: any) {
@@ -104,7 +122,8 @@ export class DataService {
     const formData = new FormData();
     formData.append('order_id', update.order_id);
 
-    const URL = 'http://bloompod.api.gc-ecommerceapp.com/bloompod_api/dXBkYXRlX29yZGVy';
+    const URL =
+      'https://detailsblooms.gc-ecommerceapp.com/api/bloompod_api/dXBkYXRlX29yZGVy';
 
     if (update.payment) {
       const posterFile = await fetch(update.payment);
@@ -114,7 +133,10 @@ export class DataService {
     return await this.http.post(URL, formData).toPromise();
   }
 
-  formData(data:any) {
-    return this.http.post('http://bloompod.api.gc-ecommerceapp.com/bloompod_api/dXBkYXRlX29yZGVy', data);
+  formData(data: any) {
+    return this.http.post(
+      'https://detailsblooms.gc-ecommerceapp.com/api/bloompod_api/dXBkYXRlX29yZGVy',
+      data
+    );
   }
 }
