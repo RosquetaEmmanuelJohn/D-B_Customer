@@ -231,12 +231,12 @@
 
             <li class="nav-item" id="nav-items" *ngIf="show_cart == true">
               <a class="nav-link" title="Profile" href="#/nav/profile"
-                >Person</a
+                ><mat-icon style="display: flex; font-size: 1.5rem;">person</mat-icon></a
               >
             </li>
 
             <li class="nav-item" id="nav-items" *ngIf="show_cart == true">
-              <a class="nav-link" title="Cart" (click)="Cart()"> Cart</a>
+              <a class="nav-link" title="Cart" (click)="Cart()"><mat-icon style="display: flex;font-size: 1.5rem;">add_shopping_cart</mat-icon></a>
             </li>
 
             <li class="nav-item" id="nav-items" *ngIf="show_cart != true">

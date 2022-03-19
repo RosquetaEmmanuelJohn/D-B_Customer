@@ -1,4 +1,4 @@
-<div class="mx-auto" style="width: 75%; margin-top: 1%; background: none">
+<div class="mx-auto" id="topay-form" style="width: 75%; margin-top: 1%; background: none">
   <div class="card-body">
     <div class="card-title text-center header-top">
       <mat-icon>compare_arrows</mat-icon>
@@ -105,7 +105,7 @@
                     >
                   </button>
                 </p>
-                <div class="row">
+                <div class="row p-3">
                   <div class="col">
                     <p>Mode:</p>
                     <p id="Infos">
@@ -114,12 +114,12 @@
                   </div>
 
                   <div class="col">
-                    <p>Status:</p>
-                    <p id="Infos">{{ order.order_status }}</p>
+                    <p>Total Price:</p>
+                    <p id="Infos">₱{{ order.order_totalprice | number:'1.2'}}</p>
                   </div>
                 </div>
 
-                <div class="row mt-3">
+                <div class="row mt-3 p-3">
                   <div class="col">
                     <p>Date and Time:</p>
                     <p id="Infos">
