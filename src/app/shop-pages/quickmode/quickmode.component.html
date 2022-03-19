@@ -46,8 +46,8 @@
         *ngIf="mode == 'Delivery'"
         (submit)="onSubmit($event)"
       >
-        <div class="form-group mx-auto mt-3" style="width: 93%">
-          <label>Recipient's Name</label>
+        <div class="form-group required mx-auto mt-3" style="width: 93%">
+          <label class="control-label">Recipient's Name</label>
           <input
             type="text"
             class="form-control"
@@ -57,9 +57,11 @@
         </div>
 
         <div style="display: flex">
-          <div class="form-group mx-auto" style="width: 40%">
+          <div class="form-group required mx-auto" style="width: 40%">
             <div class="select">
-              <label for="custom-select">Municipality</label>
+              <label class="control-label" for="custom-select"
+                >Municipality</label
+              >
               <select
                 id="custom-select"
                 class="form-select custom-select"
@@ -75,9 +77,9 @@
             </div>
           </div>
 
-          <div class="form-group mx-auto" style="width: 46%">
+          <div class="form-group required mx-auto" style="width: 46%">
             <div class="select">
-              <label for="selectInput">Baranggay</label>
+              <label class="control-label" for="selectInput">Baranggay</label>
               <select
                 *ngIf="municipality == 'Subic Bay Freeport Zone'; else other"
                 disabled
@@ -112,8 +114,8 @@
           </div>
         </div>
 
-        <div class="form-group mx-auto" style="width: 93%">
-          <label>Address</label>
+        <div class="form-group required mx-auto" style="width: 93%">
+          <label class="control-label">Address</label>
           <input
             type="text"
             class="form-control"
@@ -122,13 +124,13 @@
           />
         </div>
 
-        <div class="form-group mx-auto mt-3" style="width: 93%">
-          <label>Landmark</label>
+        <div class="form-group required mx-auto mt-3" style="width: 93%">
+          <label class="control-label">Landmark</label>
           <input type="text" class="form-control" required />
         </div>
 
-        <div class="form-group mx-auto mt-3" style="width: 93%">
-          <label>Contact Number</label>
+        <div class="form-group required mx-auto mt-3" style="width: 93%">
+          <label class="control-label">Contact Number</label>
           <input
             type="tel"
             id="phone"
@@ -140,14 +142,16 @@
         </div>
 
         <div style="display: flex">
-          <div class="form-group mx-auto" style="width: 40%">
-            <label>Date</label>
+          <div class="form-group required mx-auto" style="width: 40%">
+            <label class="control-label">Date</label>
             <input type="date" class="form-control" required />
           </div>
 
-          <div class="form-group mx-auto" style="width: 46%">
+          <div class="form-group required mx-auto" style="width: 46%">
             <div class="select">
-              <label for="selectInput">Time of Delivery</label>
+              <label class="control-label" for="selectInput"
+                >Time of Delivery</label
+              >
               <select
                 id="selectInput"
                 class="form-select custom-select"
@@ -166,8 +170,8 @@
           </div>
         </div>
 
-        <div class="form-group mx-auto mt-3" style="width: 93%">
-          <label>Bouquet Message/Note</label>
+        <div class="form-group required mx-auto mt-3" style="width: 93%">
+          <label class="control-label">Bouquet Message/Note</label>
           <!-- <input type="date" class="form-control" required /> -->
           <textarea
             class="form-control"
@@ -206,14 +210,16 @@
         (submit)="pickSubmit($event)"
       >
         <div style="display: flex">
-          <div class="form-group mx-auto" style="width: 40%">
-            <label>Date</label>
+          <div class="form-group required mx-auto" style="width: 40%">
+            <label class="control-label">Date</label>
             <input type="date" class="form-control" required />
           </div>
 
-          <div class="form-group mx-auto" style="width: 46%">
+          <div class="form-group required mx-auto" style="width: 46%">
             <div class="select">
-              <label for="selectInput">Time of Pick Up</label>
+              <label class="control-label" for="selectInput"
+                >Time of Pick Up</label
+              >
               <select
                 id="selectInput"
                 class="form-select custom-select"
@@ -232,8 +238,8 @@
           </div>
         </div>
 
-        <div class="form-group mx-auto mt-3" style="width: 93%">
-          <label>Contact Number</label>
+        <div class="form-group required mx-auto mt-3" style="width: 93%">
+          <label class="control-label">Contact Number</label>
           <input
             type="tel"
             id="phone"
@@ -244,8 +250,8 @@
           />
         </div>
 
-        <div class="form-group mx-auto mt-3" style="width: 93%">
-          <label>Bouquet Message/Note</label>
+        <div class="form-group required mx-auto mt-3" style="width: 93%">
+          <label class="control-label">Bouquet Message/Note</label>
           <!-- <input type="date" class="form-control" required /> -->
           <textarea
             class="form-control"

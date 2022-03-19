@@ -4,12 +4,18 @@
   box-sizing: border-box;
 }
 
+.form-group.required .control-label:after {
+  content: " *";
+  color: red;
+}
+
 #details {
   width: 65%;
   margin-top: 1%;
   color: white;
   font-weight: 300;
-  background: url("../../../assets/icon/header1.jpg") no-repeat center center fixed; 
+  background: url("../../../assets/icon/header1.jpg") no-repeat center center
+    fixed;
   background-size: cover;
   border-radius: 2.5rem;
   padding: 1rem 1rem;
@@ -21,7 +27,6 @@
   border-radius: 2.5rem;
   padding: 1rem 1rem;
 }
-
 
 :root {
   --select-border: #777;
@@ -83,70 +88,70 @@ select {
   // background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
 }
 
-  #mode_form {
-    background: none;
-    color: rgb(2, 34, 12);
-    width: 65%; 
-    margin-top: 1%
-  }
-
-  label {
-    font-size: 1rem;
-  }
-
-  .form-control {
-    height: calc(1.5em + 1.5rem + 2px);
-    background-color: none;
-  }
-
-  .custom-select {
-    height: calc(1.5em + 1.5rem + 2px);
-    background-color: none;
+#mode_form {
+  background: none;
+  color: rgb(2, 34, 12);
+  width: 65%;
+  margin-top: 1%;
 }
 
-  #spinner {
-    width: 10%;
-    height: 21%;
-    position: fixed;
-    top: 35%;
-    left: calc(55% - 10%);
-    z-index: 100;
-  }
-  
-  #wait {
-    position: fixed;
-    top: 56%;
-    left: calc(57% - 10%);
-    z-index: 100;
-  }
-  
-  #page-overlay {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    z-index: 1009;
-    background: none;
-  }
-  
-  .rotate {
-    animation: rotation 4s infinite linear;
-  }
-  
-  @keyframes rotation {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(359deg);
-    }
-  }
+label {
+  font-size: 1rem;
+}
 
-  #submit_btn {
-    background: #3caa4a;
-    color: rgb(255, 255, 255);
-    border: none;
+.form-control {
+  height: calc(1.5em + 1.5rem + 2px);
+  background-color: none;
+}
+
+.custom-select {
+  height: calc(1.5em + 1.5rem + 2px);
+  background-color: none;
+}
+
+#spinner {
+  width: 10%;
+  height: 21%;
+  position: fixed;
+  top: 35%;
+  left: calc(55% - 10%);
+  z-index: 100;
+}
+
+#wait {
+  position: fixed;
+  top: 56%;
+  left: calc(57% - 10%);
+  z-index: 100;
+}
+
+#page-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 1009;
+  background: none;
+}
+
+.rotate {
+  animation: rotation 4s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
   }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+#submit_btn {
+  background: #3caa4a;
+  color: rgb(255, 255, 255);
+  border: none;
+}
 
 .showcase {
   color: rgb(2, 34, 12);
@@ -163,11 +168,11 @@ select {
   font-family: "bebas";
 }
 
-@media screen and (max-width: 850px) { 
+@media screen and (max-width: 850px) {
   #mode_form {
-    width: 100%; 
+    width: 100%;
   }
   .explorer {
-    font-size: 10vw;     
+    font-size: 10vw;
   }
 }

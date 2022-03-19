@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+.form-group.required .control-label:after {
+  content: " *";
+  color: red;
+}
+
 :root {
   --select-border: #777;
   --select-focus: blue;
@@ -83,8 +88,8 @@ select {
 #mode_form {
   background: none;
   color: rgb(2, 34, 12);
-  width: 65%; 
-  margin-top: 1%
+  width: 65%;
+  margin-top: 1%;
 }
 
 label {
@@ -160,12 +165,12 @@ label {
   font-family: "bebas";
 }
 
-@media screen and (max-width: 850px) { 
+@media screen and (max-width: 850px) {
   #mode_form {
-    width: 100%; 
+    width: 100%;
     // background-color: red;
   }
   .explorer {
-    font-size: 10vw;     
+    font-size: 10vw;
   }
 }
