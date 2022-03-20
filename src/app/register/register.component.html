@@ -101,7 +101,6 @@
   <img class="rotate" id="spinner" src="../../../assets/icon/benef_logo.png"><b id="wait">Please wait...</b>
 </div> -->
 
-
 <div class="outer">
   <div class="middle">
     <div class="inner">
@@ -109,9 +108,9 @@
         <div class="row">
           <div class="col-sm">
             <div class="contain mx-auto my-auto">
-              <div style="display: flex;">
+              <div style="display: flex">
                 <div style="flex-basis: 70%">
-                  <img class="logo_img mb-3" src="../../assets/icon/benef_log.png" />
+                  <img class="logo_img mb-3" src="assets/icon/benef_log.png" />
                 </div>
               </div>
             </div>
@@ -122,7 +121,15 @@
                 <div class="user_card">
                   <div class="d-flex justify-content-center form_container">
                     <form ngNativeValidate (submit)="register($event)">
-                      <h1 style="color: rgb(2, 34, 12);text-align: center;font-weight: 500;">Registration</h1>
+                      <h1
+                        style="
+                          color: rgb(2, 34, 12);
+                          text-align: center;
+                          font-weight: 500;
+                        "
+                      >
+                        Registration
+                      </h1>
                       <div class="input-group mb-3">
                         <input
                           type="text"
@@ -186,19 +193,17 @@
                           [ngModelOptions]="{ standalone: true }"
                         />
                         <small
-                          ><label class="form-check-label" style="color: rgb(2, 34, 12);">
+                          ><label
+                            class="form-check-label"
+                            style="color: rgb(2, 34, 12)"
+                          >
                             Show Password
                           </label></small
                         >
                       </div>
 
                       <div
-                        class="
-                          d-flex
-                          justify-content-center
-                          mt-3
-                          login_container
-                        "
+                        class="d-flex justify-content-center mt-3 login_container"
                       >
                         <button
                           type="submit"
@@ -207,15 +212,9 @@
                         >
                           Register
                         </button>
-                        
                       </div>
                       <div
-                        class="
-                          d-flex
-                          justify-content-center
-                          mt-3
-                          login_container
-                        "
+                        class="d-flex justify-content-center mt-3 login_container"
                       >
                         <!-- <button
                           type="button"
@@ -225,8 +224,12 @@
                         >
                           Login
                         </button> -->
-                        <span style="color: rgb(2, 34, 12);">Already have an Account? <a href="#/login"><b><u>Login</u></b></a></span> 
-                        
+                        <span style="color: rgb(2, 34, 12)"
+                          >Already have an Account?
+                          <a href="#/login"
+                            ><b><u>Login</u></b></a
+                          ></span
+                        >
                       </div>
                     </form>
                   </div>
@@ -241,5 +244,8 @@
 </div>
 
 <div id="page-overlay" *ngIf="showSpinner">
-  <img class="rotate" id="spinner" src="../../../assets/icon/benef_logo.png"><b id="wait">Please wait...</b>
+  <img class="rotate" id="spinner" src="assets/icon/benef_logo.png" /><b
+    id="wait"
+    >Please wait...</b
+  >
 </div>

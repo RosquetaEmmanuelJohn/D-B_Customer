@@ -48,7 +48,7 @@
   <div class="mx-auto" id="main_card">
     <div class="card-body">
       <div *ngIf="!orders" style="text-align: center">
-        <img src="../../../assets/empty.svg" alt="emp" />
+        <img src="assets/empty.svg" alt="emp" />
         <h3><strong>No Order that needs to be paid yet. Order Now!</strong></h3>
         <br />
       </div>
@@ -64,14 +64,14 @@
               <img
                 *ngIf="order.order_flower == 'Generated Flower Bouquet'"
                 class="card-img-top p-1 mb-0"
-                src="../../../assets/icon/benef_log.jpg"
+                src="assets/icon/benef_log.jpg"
                 alt="Card image cap"
               />
               <img
                 style="width: 13.8vw;"
                 *ngIf="order.order_flower != 'Generated Flower Bouquet'"
                 class="card-img-top p-1 mb-0"
-                src="http://bloompod.api.gc-ecommerceapp.com/bloompod_api/quick/{{
+                src="https://detailsblooms.gc-ecommerceapp.com/api/bloompod_api/quick/{{
                   order.order_flower
                 }}.jpg"
                 alt="Card image cap"
