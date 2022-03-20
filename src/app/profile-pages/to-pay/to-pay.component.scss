@@ -186,15 +186,17 @@
   }
 }
 
-@media screen and (max-width: 1000px) {
-  .header-top {
-    .explorer {
-      font-size: 5vw;
-      background-color: none;
+#topay-form {
+  width: 75%; 
+  margin-top: 1%; 
+  background: none
+}
 
-      text-transform: uppercase;
-      font-family: "bebas";
-    }
+@media screen and (max-width: 1150px) {
+  #topay-form {
+    width: 100%; 
+    margin-top: 1%; 
+    background: none
   }
 }
 

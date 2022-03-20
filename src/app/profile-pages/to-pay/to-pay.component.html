@@ -1,10 +1,10 @@
-<div class="mx-auto" id="topay-form" style="width: 75%; margin-top: 1%; background: none">
+<div class="mx-auto" id="topay-form">
   <div class="card-body">
     <div class="card-title text-center header-top">
-      <mat-icon>compare_arrows</mat-icon>
+      <!-- <mat-icon>compare_arrows</mat-icon> -->
 
       <div class="showcase">
-        <h3 class="mt-5" id="line-style" style="text-align: center">
+        <h3 class="mt-1" id="line-style" style="text-align: center">
           <span class="explorer">TO PAY</span>
         </h3>
       </div>
@@ -68,6 +68,7 @@
                 alt="Card image cap"
               />
               <img
+                style="width: 13.8vw;"
                 *ngIf="order.order_flower != 'Generated Flower Bouquet'"
                 class="card-img-top p-1 mb-0"
                 src="http://bloompod.api.gc-ecommerceapp.com/bloompod_api/quick/{{

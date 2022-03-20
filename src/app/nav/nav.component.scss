@@ -134,7 +134,7 @@ a {
 }
 
 .overlay {
-  height: 0%;
+  height: 0;
   width: 100%;
   position: fixed;
   z-index: 9;
@@ -151,6 +151,39 @@ a {
   display: block;
   height: 23rem;
   top: 0;
+}
+
+#floristChoice {
+box-shadow: inset 0 0 0 0 #54b3d6;
+transition: color .5s ease-in-out, box-shadow .5s ease-in-out;
+padding-top: 15px;
+}
+
+#customerChoice {
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  transition: color .5s ease-in-out, box-shadow .5s ease-in-out;
+  padding-top: 15px;
+}
+
+#floristChoice:hover{
+  // font-size: 1rem;
+  // background-color: rgba(0, 245, 253, 0.8);
+  // border: 1px solid;
+  // width: 40%;
+  // height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  box-shadow: inset 100vw 0 0 0 #54b3d6;
+  color: rgb(255, 255, 255);
+}
+#customerChoice:hover {
+  // font-size: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  box-shadow: inset 100vw 0 0 0 #54b3d6;
+  color: rgb(255, 255, 255);
 }
 
 .overlay-content {
